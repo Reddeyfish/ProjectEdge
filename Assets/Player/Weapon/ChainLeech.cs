@@ -34,8 +34,7 @@ public class ChainLeech : MonoBehaviour {
         this.target = hit.transform;
         attachPoint = target.InverseTransformPoint(hit.point);
         attachJoint.connectedBody = target.GetComponentInParent<Rigidbody2D>();
-        attachJoint.connectedAnchor = attachPoint;
-        attachJoint.distance = hit.distance;
+        attachJoint.connectedAnchor = Random.insideUnitCircle.normalized * hit.distance; 
 
         targetHealth = target.GetComponentInParent<Health>();
         targetHealth.onDeath += TargetHealth_onDeath;
