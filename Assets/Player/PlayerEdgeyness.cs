@@ -7,6 +7,10 @@ public class PlayerEdgeyness : MonoBehaviour {
     private static int edgeyness;
     private static int temporaryEdgeyness;
 
+    public delegate void OnEdgeynessChange();
+
+    public static event OnEdgeynessChange onEdgeynessChange = delegate { };
+
 	// Use this for initialization
 	void Start () {
         StartCoroutine(testPrint());
@@ -23,12 +27,15 @@ public class PlayerEdgeyness : MonoBehaviour {
 	
     public void resetEdgeyness() {
         edgeyness = 0;
+        onEdgeynessChange();
     }
     public static void changeEdgeynessBy(int changeNum) {
         edgeyness += changeNum;
+        onEdgeynessChange();
     }
     public void setEdgeyness(int newEdgeyness) {
         edgeyness = newEdgeyness;
+        onEdgeynessChange();
     }
     public static int getEdgeyness() {
         return edgeyness;
