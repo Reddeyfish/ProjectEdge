@@ -13,8 +13,8 @@ public abstract class _PickUpAttribute : MonoBehaviour {
         playerEdgeyness = player.GetComponent<PlayerEdgeyness>();
 	}
 
-    protected abstract void activate();
-    protected void DeleteSelf() {
+    public abstract void activate();
+    public void DeleteSelf() {
         Destroy(gameObject);
     }
 }

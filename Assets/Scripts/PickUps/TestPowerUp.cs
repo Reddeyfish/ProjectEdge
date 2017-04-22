@@ -11,12 +11,10 @@ public class TestPowerUp : _PickUpAttribute {
         activate();
 	}
 
-    protected override void activate() {
+    public override void activate() {
         player.transform.localScale *= 3;
-        playerEdgeyness.changeEdgeynessBy(50);
-
-        print(playerEdgeyness.getEdgeyness());
-
+        playerEdgeyness.changeTempEdgeynessBy(50);
+        
         DeleteSelf();
     }
 }
