@@ -6,8 +6,13 @@ public class Obstacle : MonoBehaviour {
     GameObject player;
 
     public float detection_range = 30f;
+
+    public float movement_speed = 30f;
     private void Start()
     {
+      
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2(Random.Range(-5,5)*movement_speed,Random.Range(-5,5)*movement_speed));
 
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -25,7 +30,7 @@ public class Obstacle : MonoBehaviour {
     {
         player = GameObject.FindGameObjectWithTag("Player");
         float distance = Vector3.Distance(this.transform.position, player.transform.position);
-        Debug.Log(distance);
+      //  Debug.Log(distance);
         if (distance > detection_range)
             Destroy(gameObject);
     }
