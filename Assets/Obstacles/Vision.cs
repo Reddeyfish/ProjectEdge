@@ -8,11 +8,15 @@ public class Vision : MonoBehaviour {
     Vector3 Prey;
 
     Rigidbody2D rigid;
-    public float hunter_speed = 4000;
+    public float hunter_speed = 4000; //MaxDistance
+    public float acceleration = 10; //hunter acceleration
+
+    public GameObject trigger;
 
     bool chase = false;
 	// Use this for initialization
 	void Start () {
+        trigger.GetComponent<SpriteRenderer>().enabled = false;
         rigid = GetComponentInParent<Rigidbody2D>();
         Parent_Hunter = transform.root.gameObject;
 	}
@@ -21,9 +25,11 @@ public class Vision : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Prey = other.transform.position;
+           
             chase = true;
-           // Make parent chase player
+            trigger.GetComponent<SpriteRenderer>().enabled = true;
+       
+            // Make parent chase player
         }
 
 
@@ -35,9 +41,10 @@ public class Vision : MonoBehaviour {
         //chasing Player
         if(chase)
         {
+            Prey = GameObject.FindGameObjectWithTag("Player").transform.position;
             Vector2 targetDirection = Prey - this.transform.position;
             targetDirection.Normalize();
-            rigid.velocity = Vector2.MoveTowards(rigid.velocity, hunter_speed*targetDirection, Time.deltaTime *1);
+            rigid.velocity = Vector2.MoveTowards(rigid.velocity, hunter_speed*targetDirection, Time.deltaTime *acceleration);
 
         }
     }
