@@ -32,6 +32,7 @@ public class PlayerEdgeyness : MonoBehaviour {
         }
     }
 	
+    //Edgeyness getters and setterse
     public void resetEdgeyness() {
         edgeyness = 0;
         onEdgeynessChange();
@@ -48,6 +49,7 @@ public class PlayerEdgeyness : MonoBehaviour {
         return edgeyness;
     }
 
+    //Temp Edgeyness getters and setters
     public void resetTempEdgeyness() {
         temporaryEdgeyness = 0;
         onTempEdgeChange();
@@ -65,16 +67,17 @@ public class PlayerEdgeyness : MonoBehaviour {
     public static int getTempEdgeyness() {
         return temporaryEdgeyness;
     }
+    public static int getMaxTempEdgeyness() {
+        return maxTempEdgeyness;
+    }
+
 
     public void transferEdgeyness() {
         changeEdgeynessBy(getTempEdgeyness());
         resetTempEdgeyness();
     }
 
-    public static int getMaxTempEdgeyness() {
-        return maxTempEdgeyness;
-    }
-
+    
     public static void setMaxTempEdgeyness(int newMax) {
         maxTempEdgeyness = newMax;
         if (temporaryEdgeyness > maxTempEdgeyness) { edgeyness = maxTempEdgeyness; }

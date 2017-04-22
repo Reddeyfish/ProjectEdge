@@ -20,7 +20,7 @@ public class BaseEntry : MonoBehaviour {
     }
 
     private void Update() {
-        if(baseTooltip.isActiveAndEnabled) {
+        if (baseTooltip.isActiveAndEnabled) {
             if(Input.GetKeyDown(KeyCode.Space)) {
                 baseScreen.gameObject.SetActive(true);
             }

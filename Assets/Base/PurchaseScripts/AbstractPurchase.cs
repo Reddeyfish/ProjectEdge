@@ -30,7 +30,7 @@ public abstract class AbstractPurchase : MonoBehaviour {
     /// </summary>
     public void ButtonPurchase() {
         Purchase();
-        PlayerEdgeyness.changeEdgeynessBy(cost);
+        PlayerEdgeyness.changeEdgeynessBy(-cost);
         CheckPurchasable();
     }
 
