@@ -189,7 +189,7 @@ MonoBehaviour:
   prefab: {fileID: 1352488312748610, guid: 868f76293bbf4314f94c5b1cf8f0cd61, type: 2}
   numberOfObjects: 8
   radius: 10
-  timer: 3
+  timer: 2
 --- !u!1001 &1797400261
 Prefab:
   m_ObjectHideFlags: 0
@@ -277,4 +277,50 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f08642b145f4a6a429cebb39978d4d7f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1988753219
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.5400004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964186627779096, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983444943767162, guid: 35b7885079850574196a7128c1260560, type: 2}
+      propertyPath: m_Name
+      value: Temp_Hunter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 35b7885079850574196a7128c1260560, type: 2}
   m_IsPrefabParent: 0
