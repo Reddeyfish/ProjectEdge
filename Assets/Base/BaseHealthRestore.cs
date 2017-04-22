@@ -12,7 +12,7 @@ public class BaseHealthRestore : MonoBehaviour {
     protected Button button;
 
     [SerializeField]
-    protected float edgeCost = 1;
+    protected int edgeCost = 1;
     [SerializeField]
     protected float healthGain = 1;
 
@@ -29,7 +29,7 @@ public class BaseHealthRestore : MonoBehaviour {
 
     //Check if the player is missing health and could use healing
     void CheckHealable() {
-        button.interactable = playerHealth.healthMissing != 0;
+        button.interactable = playerHealth.healthMissing != 0 && PlayerEdgeyness.getEdgeyness() >= edgeCost;
     }
 
     /// <summary>
@@ -37,6 +37,7 @@ public class BaseHealthRestore : MonoBehaviour {
     /// </summary>
     public void RestoreHealth() {
         playerHealth.Heal(healthGain);
+        PlayerEdgeyness.changeEdgeynessBy(-1);
         //reduce edgeyness here
 
         CheckHealable();

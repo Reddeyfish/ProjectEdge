@@ -24,13 +24,13 @@ public class PlayerEdgeyness : MonoBehaviour {
     public void resetEdgeyness() {
         edgeyness = 0;
     }
-    public void changeEdgeynessBy(int changeNum) {
+    public static void changeEdgeynessBy(int changeNum) {
         edgeyness += changeNum;
     }
     public void setEdgeyness(int newEdgeyness) {
         edgeyness = newEdgeyness;
     }
-    public int getEdgeyness() {
+    public static int getEdgeyness() {
         return edgeyness;
     }
 
