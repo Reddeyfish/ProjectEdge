@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114572796365859460}
   - component: {fileID: 114501791896638934}
   - component: {fileID: 114806301501152726}
+  - component: {fileID: 114534943315267552}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -111,6 +112,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &114534943315267552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043218444586414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867b4aa7f17e0504e9479b176e67b42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1352488312748610, guid: 868f76293bbf4314f94c5b1cf8f0cd61, type: 2}
+  numberOfObjects: 20
+  radius: 10
+  timer: 3
 --- !u!114 &114572796365859460
 MonoBehaviour:
   m_ObjectHideFlags: 1
