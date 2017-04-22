@@ -8,9 +8,21 @@ public class Obstacle : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+   void OnCollisionEnter(Collision collision)
+    {
+        GameObject otherObj = collision.gameObject;
+        Debug.Log("Collided with: " + otherObj);
+
+
+        if (collision.gameObject.tag == "Player")
+        {
+            //GameObject otherObj = collision.gameObject;
+            //Debug.Log("Collided with: " + otherObj);
+
+        }
+    }
+    // Update is called once per frame
+ //   void Update () {
+	 
+	//}
 }
