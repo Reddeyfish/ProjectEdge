@@ -16,7 +16,7 @@ public class PlayerEdgeyness : MonoBehaviour {
 
     //Test print stuff 
     private delegate void OnTempEdgeChange();
-    private event OnTempEdgeChange onTempEdgeChange = delegate { print("Temp Edgeyness: " + getTempEdgeyness()); };
+    private event OnTempEdgeChange onTempEdgeChange = delegate { /*print("Temp Edgeyness: " + getTempEdgeyness());*/ };
 
     //End test print stuff
 

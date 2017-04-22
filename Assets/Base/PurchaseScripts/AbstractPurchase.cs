@@ -25,7 +25,7 @@ public abstract class AbstractPurchase : MonoBehaviour {
     [SerializeField]
     protected string playerPrefsKey;
 
-    const string costFormat = "{0} Edgeyness";
+    protected const string costFormat = "{0} Edgeyness";
 
     protected int numUpgrades = 0;
 
@@ -69,7 +69,7 @@ public abstract class AbstractPurchase : MonoBehaviour {
         CheckPurchasable();
     }
 
-    void UpdateText() {
+    protected virtual void UpdateText() {
         buttonText.text = string.Format(costFormat, cost());
         labelText.text = string.Format(labelFormat, numUpgrades + 1);
     }

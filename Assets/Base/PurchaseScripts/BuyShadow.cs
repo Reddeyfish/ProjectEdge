@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuyShadow : AbstractPurchase {
+public class BuyShadow : AbstractOneTimePurchase {
 
     [SerializeField]
     protected GameObject shadowObject;
