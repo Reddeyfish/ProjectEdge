@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Enemy_Spawner : MonoBehaviour {
 
-    public GameObject prefab;
-    GameObject player;
-    public int numberOfObjects = 20;
-    public float radius = 10f;
-    Vector3 player_position;
+    public GameObject prefab; //what to spawn; 
+    GameObject player; // player
+    public int numberOfObjects = 20;   // Maximum obstacles near by the player;
+    public float radius = 10f; // spawn range;
+    Vector3 player_position; // player position;
 
-    GameObject[] obstacles;
+    GameObject[] obstacles; // array on 
     int count;
 
 
