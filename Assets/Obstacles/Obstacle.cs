@@ -5,9 +5,9 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour {
     GameObject player;
 
-    public float detection_range = 30f;
+    public float detection_range = 30f; // If exceed this range the object self-destructs.
 
-    public float movement_speed = 30f;
+    public float movement_speed = 30f; // how fast the object is going on start.
     private void Start()
     {
       
@@ -26,7 +26,7 @@ public class Obstacle : MonoBehaviour {
 
 
    // Update is called once per frame
-       void Update()
+       void Update()  //self_destruct things;
     {
         player = GameObject.FindGameObjectWithTag("Player");
         float distance = Vector3.Distance(this.transform.position, player.transform.position);
