@@ -83,4 +83,4 @@ public class display_edgeyness : MonoBehaviour {
             //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
         }
 	}
-}
+} //kmf

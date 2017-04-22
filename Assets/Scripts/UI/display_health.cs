@@ -23,6 +23,7 @@ public class display_health : MonoBehaviour {
     private Vector3 scale;
     private static int max_health = 80; // number of bars to instantiate
     private GameObject[] bar_array; // array of bars :V
+    private int mod = 5;
 
     private float offset = -20;
 
@@ -73,10 +74,11 @@ public class display_health : MonoBehaviour {
             health = player.GetComponent<Health>().HealthValue;
         }
         // turn on necessary bars
-        for (int i = 0; i < health && i < max_health; i++)
+        float bars = health / mod;
+        for (int i = 0; i < bars && i < max_health; i++)
         {
             bar_array[i].SetActive(true);
             //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
         }
     }
-}
+} //kmf
