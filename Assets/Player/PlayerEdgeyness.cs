@@ -6,6 +6,7 @@ public class PlayerEdgeyness : MonoBehaviour {
 
     private static int edgeyness;
     private static int temporaryEdgeyness;
+    private static int maxTempEdgeyness = 50;
 
     public delegate void OnEdgeynessChange();
 
@@ -46,9 +47,11 @@ public class PlayerEdgeyness : MonoBehaviour {
     }
     public void changeTempEdgeynessBy(int changeNum) {
         temporaryEdgeyness += changeNum;
+        if (temporaryEdgeyness > maxTempEdgeyness) { edgeyness = maxTempEdgeyness; }
     }
     public void setTempEdgeyness(int newEdgeyness) {
         temporaryEdgeyness = newEdgeyness;
+        if (temporaryEdgeyness > maxTempEdgeyness) { edgeyness = maxTempEdgeyness; }
     }
     public int getTempEdgeyness() {
         return temporaryEdgeyness;
@@ -57,5 +60,12 @@ public class PlayerEdgeyness : MonoBehaviour {
     public void transferEdgeyness() {
         changeEdgeynessBy(getTempEdgeyness());
         resetTempEdgeyness();
+    }
+
+        return maxTempEdgeyness;
+    }
+
+        maxTempEdgeyness = newMax;
+        if (temporaryEdgeyness > maxTempEdgeyness) { edgeyness = maxTempEdgeyness; }
     }
 }
