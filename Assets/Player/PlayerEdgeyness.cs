@@ -11,6 +11,12 @@ public class PlayerEdgeyness : MonoBehaviour {
 
     public static event OnEdgeynessChange onEdgeynessChange = delegate { };
 
+    //Test print stuff 
+    private delegate void OnTempEdgeChange();
+    private event OnTempEdgeChange onTempEdgeChange = delegate { print("Temp Edgeyness: " + getTempEdgeyness()); };
+
+    //End test print stuff
+
 	// Use this for initialization
 	void Start () {
         //StartCoroutine(testPrint());
@@ -43,14 +49,17 @@ public class PlayerEdgeyness : MonoBehaviour {
 
     public void resetTempEdgeyness() {
         temporaryEdgeyness = 0;
+        onTempEdgeChange();
     }
     public void changeTempEdgeynessBy(int changeNum) {
         temporaryEdgeyness += changeNum;
+        onTempEdgeChange();
     }
     public void setTempEdgeyness(int newEdgeyness) {
         temporaryEdgeyness = newEdgeyness;
+        onTempEdgeChange();
     }
-    public int getTempEdgeyness() {
+    public static int getTempEdgeyness() {
         return temporaryEdgeyness;
     }
 
