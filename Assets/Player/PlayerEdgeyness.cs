@@ -13,7 +13,7 @@ public class PlayerEdgeyness : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(testPrint());
+        //StartCoroutine(testPrint());
 	}
 
     private IEnumerator testPrint() {

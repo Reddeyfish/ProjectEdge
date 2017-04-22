@@ -12,7 +12,7 @@ public class TestPowerUp : _PickUpAttribute {
 	}
 
     public override void activate() {
-        player.transform.localScale *= 3;
+        //player.transform.localScale *= 3;
         playerEdgeyness.changeTempEdgeynessBy(50);
         
         DeleteSelf();
