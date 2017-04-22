@@ -65,7 +65,9 @@ public class Health : MonoBehaviour {
 
     [SerializeField]
     protected float maxHealth = 100f;
+    public float MaxHealth { get { return maxHealth; } }
     public float healthPercent { get { return health / maxHealth; } }
+    public float healthMissing { get { return maxHealth - health; } }
 
     public void ResizeMaxHealth(float newMaxHealth) {
         maxHealth = newMaxHealth;
