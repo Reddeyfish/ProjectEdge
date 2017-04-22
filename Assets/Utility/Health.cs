@@ -20,7 +20,7 @@ public class Health : MonoBehaviour {
     public event HealthChanged onHealthChanged = delegate { };
     public event OnDeath onDeath = delegate { };
 
-    [SerializeField]
+    
     protected float health = 100f;     // current health
     public float HealthValue { get { return health; } }
 
@@ -63,13 +63,24 @@ public class Health : MonoBehaviour {
         }
     }
 
-    protected float maxHealth;
+    [SerializeField]
+    protected float maxHealth = 100f;
     public float healthPercent { get { return health / maxHealth; } }
+
+    public void ResizeMaxHealth(float newMaxHealth) {
+        maxHealth = newMaxHealth;
+
+        if (health > maxHealth) {
+            health = maxHealth;
+        }
+
+        onHealthChanged();
+    }
 
     //private HealthBar bar;
 
     void Awake() {
-        maxHealth = health;
+        health = maxHealth;
     }
 
     public virtual float Damage(float amount) {
