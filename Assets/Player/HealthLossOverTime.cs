@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public class HealthLossOverTime : MonoBehaviour {
 
+    PlayerMovement movement;
+
     [SerializeField]
     protected float passiveHealthLossPerSecond = 0.05f;
 
@@ -15,12 +17,20 @@ public class HealthLossOverTime : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        movement = GetComponentInParent<PlayerMovement>();
         health = GetComponent<Health>();
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-        health.Damage(passiveHealthLossPerSecond * Time.deltaTime);	
+        float healthLoss;
+        if(movement.normalizedMovementInput.sqrMagnitude > 0) {
+            //actively moving
+            healthLoss = activeHealthLossPerSecond * Time.deltaTime;
+        } else {
+            //drifting
+            healthLoss = passiveHealthLossPerSecond * Time.deltaTime;
+        }
+        health.Damage(healthLoss);	
 	}
 }
