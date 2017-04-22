@@ -14,7 +14,7 @@ public static class Tags {
     }
 
     public const string Player = "Player";
-    public const string SoundTrigger = "Sound Trigger";
+    public const string Base = "Base";
     public const string Enemy = "Enemy";
 
     public static class Input
@@ -44,34 +44,6 @@ public static class Tags {
         /// Layer for enemy hitboxes.
         /// </summary>
         public const string Enemy = "Enemy";
-        /// <summary>
-        /// Layer for enemy projectile hitboxes.
-        /// </summary>
-        public const string EnemyProjectile = "EnemyProjectile";
-        /// <summary>
-        /// Layer for enemy projectile hitboxes which ignore walls.
-        /// </summary>
-        public const string SniperProjectile = "SniperProjectile";
-
-        public const string Wall = "Walls";
-        /// <summary>
-        /// Layer for entity-environment collisions on entities (i.e. where can you walk).
-        /// </summary>
-        public const string WallOnly = "WallsOnly";
-
-        /// <summary>
-        /// Layer for sound detection on entities.
-        /// </summary>
-        public const string SoundListener = "SoundListener";
-        /// <summary>
-        /// Layer to trigger entity sound listeners.
-        /// </summary>
-        public const string SoundNoise = "SoundNoise";
-
-        /// <summary>
-        /// Temporary layer to mark areas as walkable or not.
-        /// </summary>
-        public const string StageBoundary = "StageBoundary";
     }
 
     public class SortingLayers
@@ -100,12 +72,6 @@ public static class Tags {
         public static int rangeMax = Shader.PropertyToID("_RangeMax");
         public static int imageStrength = Shader.PropertyToID("_ImageStrength");
         public static int alpha = Shader.PropertyToID("_MainTexAlpha");
-
-        public const int maxGlobalPingCount = 10;
-        public static string globalPingCount = "_GLOBAL_PING_COUNT";
-        public static string globalPingPos = "_GLOBAL_PING_POS";
-        public static string globalTimeSincePing = "_GLOBAL_TIME_SINCE_PING";
-        public static string globalPingRange = "_GLOBAL_PING_RANGE";
     }
 
     public static class Scenes
