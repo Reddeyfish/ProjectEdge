@@ -43,8 +43,6 @@ public class BaseHealthRestore : MonoBehaviour {
         CheckHealable();
 
         //play sound?
-
-        //Update the text in the GUI for the base
-        Base_ShowEdgeyness.updateText();
+        
     }
 }
