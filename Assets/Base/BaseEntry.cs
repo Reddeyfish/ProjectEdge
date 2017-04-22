@@ -12,6 +12,7 @@ public class BaseEntry : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         baseTooltip.gameObject.SetActive(true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEdgeyness>().transferEdgeyness();
     }
 
     private void OnTriggerExit2D(Collider2D other) {
