@@ -71,9 +71,11 @@ public class PlayerEdgeyness : MonoBehaviour {
         resetTempEdgeyness();
     }
 
+    public static int getMaxTempEdgeyness() {
         return maxTempEdgeyness;
     }
 
+    public static void setMaxTempEdgeyness(int newMax) {
         maxTempEdgeyness = newMax;
         if (temporaryEdgeyness > maxTempEdgeyness) { edgeyness = maxTempEdgeyness; }
     }
