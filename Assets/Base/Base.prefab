@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 222483371866833778}
   - component: {fileID: 114932867301572582}
   m_Layer: 11
-  m_Name: Restore Health
+  m_Name: Buy Edgeyness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,11 +777,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 114759379073966036}
-  buttonText: {fileID: 0}
-  labelText: {fileID: 0}
-  labelFormat: 
-  baseCost: 1
-  playerPrefsKey: 
+  buttonText: {fileID: 114225841001464400}
+  labelText: {fileID: 114932867301572582}
+  labelFormat: Buy Shadow Edgeyness {0}
+  baseCost: 20
+  playerPrefsKey: BuyShadow
   shadowObject: {fileID: 1307182980130980, guid: 7673b4bfddbde4c45b67fce7c177ec6f,
     type: 2}
 --- !u!114 &114156760207989266
@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114775992628134844}
-        m_MethodName: RestoreHealth
+        m_MethodName: ButtonPurchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1687,8 +1687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 114759379073966036}
-  buttonText: {fileID: 114225841001464400}
-  labelText: {fileID: 114932867301572582}
+  buttonText: {fileID: 114929493286135768}
+  labelText: {fileID: 114397702657444374}
   labelFormat: Restore 1 Health
   baseCost: 1
   playerPrefsKey: HealthRestore

@@ -510,9 +510,20 @@ Prefab:
       propertyPath: baseCost
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 114775992628134844, guid: 6db2f9b4097058745a2c0ffccb6cc4ec,
+        type: 2}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 498925565}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6db2f9b4097058745a2c0ffccb6cc4ec, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &498925565 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114929493286135768, guid: 6db2f9b4097058745a2c0ffccb6cc4ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 431234959}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &581787690 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114225841001464400, guid: 6db2f9b4097058745a2c0ffccb6cc4ec,
