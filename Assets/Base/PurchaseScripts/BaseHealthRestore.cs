@@ -22,6 +22,10 @@ public class BaseHealthRestore : AbstractPurchase {
         return playerHealth.healthMissing != 0;
     }
 
+    protected override int cost() {
+        return baseCost;
+    }
+
     protected override void Purchase() {
         playerHealth.Heal(healthGain);
     }

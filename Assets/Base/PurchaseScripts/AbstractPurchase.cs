@@ -12,7 +12,34 @@ public abstract class AbstractPurchase : MonoBehaviour {
     protected Button button;
 
     [SerializeField]
-    protected int cost = 1;
+    protected Text buttonText;
+    [SerializeField]
+    protected Text labelText;
+
+    [SerializeField]
+    protected string labelFormat;
+
+    [SerializeField]
+    protected int baseCost = 1;
+
+    [SerializeField]
+    protected string playerPrefsKey;
+
+    const string costFormat = "{0} Edgeyness";
+
+    protected int numUpgrades = 0;
+
+    private void Start() {
+        if (!PlayerPrefs.HasKey(playerPrefsKey)) { return; }
+
+        int numExistingUpgrades = PlayerPrefs.GetInt(playerPrefsKey);
+        Debug.Log(numExistingUpgrades);
+        for (int i = 0; i < numExistingUpgrades; i++) {
+            Purchase();
+            numUpgrades++;
+        }
+        CheckPurchasable();
+    }
 
     protected virtual void OnEnable() {
         CheckPurchasable();
@@ -20,7 +47,12 @@ public abstract class AbstractPurchase : MonoBehaviour {
 
     //Check if the player is missing health and could use healing
     protected void CheckPurchasable() {
-        button.interactable = isPurchasable() && PlayerEdgeyness.getEdgeyness() >= cost;
+        button.interactable = isPurchasable() && PlayerEdgeyness.getEdgeyness() >= cost();
+        UpdateText();
+    }
+
+    protected virtual int cost() {
+        return baseCost * (numUpgrades + 1) * (numUpgrades + 1);
     }
 
     protected abstract bool isPurchasable();
@@ -30,8 +62,16 @@ public abstract class AbstractPurchase : MonoBehaviour {
     /// </summary>
     public void ButtonPurchase() {
         Purchase();
-        PlayerEdgeyness.changeEdgeynessBy(-cost);
+        PlayerEdgeyness.changeEdgeynessBy(-cost());
+        numUpgrades++;
+        PlayerPrefs.SetInt(playerPrefsKey, numUpgrades);
+        PlayerPrefs.Save();
         CheckPurchasable();
+    }
+
+    void UpdateText() {
+        buttonText.text = string.Format(costFormat, cost());
+        labelText.text = string.Format(labelFormat, numUpgrades + 1);
     }
 
     protected abstract void Purchase();
