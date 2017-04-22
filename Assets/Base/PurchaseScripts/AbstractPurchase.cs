@@ -22,16 +22,24 @@ public abstract class AbstractPurchase : MonoBehaviour {
     [SerializeField]
     protected int baseCost = 1;
 
-    //[SerializeField]
-    //protected string playerPrefsKey;
+    [SerializeField]
+    protected string playerPrefsKey;
 
     const string costFormat = "{0} Edgeyness";
 
     protected int numUpgrades = 0;
 
-    //private void Awake() {
-    //    if(PlayerPrefs) PlayerPrefs.
-    //}
+    private void Start() {
+        if (!PlayerPrefs.HasKey(playerPrefsKey)) { return; }
+
+        int numExistingUpgrades = PlayerPrefs.GetInt(playerPrefsKey);
+        Debug.Log(numExistingUpgrades);
+        for (int i = 0; i < numExistingUpgrades; i++) {
+            Purchase();
+            numUpgrades++;
+        }
+        CheckPurchasable();
+    }
 
     protected virtual void OnEnable() {
         CheckPurchasable();
@@ -56,6 +64,8 @@ public abstract class AbstractPurchase : MonoBehaviour {
         Purchase();
         PlayerEdgeyness.changeEdgeynessBy(-cost());
         numUpgrades++;
+        PlayerPrefs.SetInt(playerPrefsKey, numUpgrades);
+        PlayerPrefs.Save();
         CheckPurchasable();
     }
 
