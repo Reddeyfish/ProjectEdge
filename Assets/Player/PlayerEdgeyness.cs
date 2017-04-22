@@ -10,7 +10,9 @@ public class PlayerEdgeyness : MonoBehaviour {
 
     public delegate void OnEdgeynessChange();
 
-    public static event OnEdgeynessChange onEdgeynessChange = delegate { };
+    public static event OnEdgeynessChange onEdgeynessChange = delegate { PlayerPrefs.SetInt(playerPrefsKey, edgeyness); PlayerPrefs.Save(); };
+
+    const string playerPrefsKey = "PlayerEdgeyness";
 
     //Test print stuff 
     private delegate void OnTempEdgeChange();
@@ -20,8 +22,10 @@ public class PlayerEdgeyness : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //StartCoroutine(testPrint());
-	}
+        if (!PlayerPrefs.HasKey(playerPrefsKey)) { return; }
+
+        edgeyness = PlayerPrefs.GetInt(playerPrefsKey);
+    }
 
     private IEnumerator testPrint() {
         while (true) {
