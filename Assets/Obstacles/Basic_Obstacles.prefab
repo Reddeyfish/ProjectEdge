@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detection_range: 30
   movement_speed: 35
-  minimum_speed: 0
+  minimum_speed: 3
 --- !u!114 &114730217858886318
 MonoBehaviour:
   m_ObjectHideFlags: 1

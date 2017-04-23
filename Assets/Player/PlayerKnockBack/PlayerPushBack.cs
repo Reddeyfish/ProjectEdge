@@ -43,7 +43,7 @@ public class PlayerPushBack : MonoBehaviour {
         playerHealth.Damage(damage);
         playerMovement.enabled = false;
 
-        camShake.screenShake(crashLength / 2);
+        camShake.screenShake(crashLength * (3/4));
 
         Vector2 direction = ((Vector2) player.transform.position - currentPosition).normalized;
         

@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detection_range: 80
   damage: 25
-  crashLength: 1.5
+  crashLength: 1.25
   movement_speed: 20
 --- !u!198 &198403036364351260
 ParticleSystem:
