@@ -14,6 +14,9 @@ public abstract class _PickUpAttribute : MonoBehaviour {
 	}
 
     public abstract void activate();
+
+    public abstract bool canCollect();
+
     public void DeleteSelf() {
         Destroy(gameObject);
     }

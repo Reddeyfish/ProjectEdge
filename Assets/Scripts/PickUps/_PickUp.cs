@@ -8,9 +8,12 @@ public class _PickUp : MonoBehaviour {
     protected Sprite[] possibleSprites;
 
     protected GameObject attributesObject;
+    protected _PickUpAttribute attribute;
 	// Use this for initialization
 	void Start () {
         attributesObject = transform.GetChild(0).gameObject;
+        attribute = attributesObject.GetComponent<_PickUpAttribute>();
+
         SpriteRenderer spriteRend = GetComponent<SpriteRenderer>();
         spriteRend.sprite = possibleSprites[Random.Range(0, possibleSprites.Length)];
 	}
@@ -18,6 +21,12 @@ public class _PickUp : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collided) {
 
         if (collided.CompareTag("Player")) {
+            if (!attribute.canCollect()) {
+                //Do something?
+                return;
+            }
+
+
             attributesObject.SetActive(true);
             attributesObject.transform.SetParent(collided.transform);
 

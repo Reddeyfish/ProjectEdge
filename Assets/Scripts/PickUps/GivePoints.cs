@@ -22,4 +22,8 @@ public class GivePoints : _PickUpAttribute {
 
         DeleteSelf();
     }
+
+    public override bool canCollect() {
+        return PlayerEdgeyness.getTempEdgeyness() < PlayerEdgeyness.getMaxTempEdgeyness();
+    }
 }

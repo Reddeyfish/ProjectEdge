@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4443336566181350}
   - component: {fileID: 212619028198264628}
   - component: {fileID: 58639908591140404}
-  - component: {fileID: 114929607022908348}
   - component: {fileID: 50305918472008564}
+  - component: {fileID: 114929607022908348}
   - component: {fileID: 114871863821749920}
   - component: {fileID: 114948885420750016}
   - component: {fileID: 114995752030104566}
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detection_range: 60
-  movement_speed: 50
-  minimum_speed: 8
+  movement_speed: 80
+  minimum_speed: 10
 --- !u!114 &114948885420750016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,8 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnOnDeath: {fileID: 1174073239841912, guid: 51f3f279c33a354499d32efe74db67f0,
     type: 2}
-  deathEffects: {fileID: 1064961387474194, guid: e46af9b9cd99e564eb63a218d9ea8bfe,
-    type: 2}
+  deathEffects: {fileID: 0}
 --- !u!114 &114967856239978230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce34a55c108e2704097d5ab37c96bb81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 24
+  damage: 20
   crashLength: 1
   crashStrengthMultiplier: 1
   playerPushBack: {fileID: 1737237601739482, guid: d3328023d44873c448a67d7a4e43652d,
