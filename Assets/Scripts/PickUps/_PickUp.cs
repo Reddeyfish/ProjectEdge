@@ -21,7 +21,15 @@ public class _PickUp : MonoBehaviour {
             attributesObject.SetActive(true);
             attributesObject.transform.SetParent(collided.transform);
 
-            Destroy(gameObject);
+            transform.SetParent(collided.transform, transform);
+
+            Vector3 startingLocalPosition = transform.localPosition;
+
+            Callback.DoLerp((float l) => {
+                float interpValue = Mathf.Pow(1 - l, 3);
+                transform.localPosition = interpValue * startingLocalPosition;
+                transform.localScale = interpValue * Vector3.one;
+                }, 0.25f, this).FollowedBy(() => Destroy(gameObject), this);
         }
     }
 }
