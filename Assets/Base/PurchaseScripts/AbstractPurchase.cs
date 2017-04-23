@@ -47,7 +47,7 @@ public abstract class AbstractPurchase : MonoBehaviour {
 
     //Check if the player is missing health and could use healing
     protected void CheckPurchasable() {
-        button.interactable = isPurchasable() && PlayerEdgeyness.getEdgeyness() >= cost();
+        button.interactable = isPurchasable() && (PlayerEdgeyness.getEdgeyness() >= cost());
         UpdateText();
     }
 
