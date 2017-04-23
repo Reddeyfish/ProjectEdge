@@ -62,12 +62,12 @@ public class LeechGun : MonoBehaviour {
 
         lastShotTime = Time.time;
 
+        //health cost
+        health.Damage(healthCost);
+
         if (!hit) { return; }
 
         GameObject leech = SimplePool.Spawn(leechPrefab, transform.position);
         leech.GetComponent<ChainLeech>().Init(hit, damageScale);
-
-        //health cost
-        health.Damage(healthCost);
     }
 }
