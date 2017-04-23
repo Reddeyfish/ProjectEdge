@@ -12,6 +12,7 @@ public class Enemy_Spawner : MonoBehaviour {
     GameObject Base;//base
     public int numberOfObjects = 20;   // Maximum obstacles near by the player;
     public float radius = 40f; // spawn range;
+    public float minRadius = 30f;
     Vector3 player_position; // player position;
 
     GameObject[] obstacles; // array to detect all obstacles around you 
@@ -75,8 +76,7 @@ public class Enemy_Spawner : MonoBehaviour {
             {
                 current_time = 0;
                 //Debug.Log("Too Little,Spawn more edge.");
-                    Vector3 pos = new Vector3(Random.Range(player_position.x - radius, player_position.x + radius),
-                        Random.Range(player_position.y - radius, player_position.y + radius), 0);
+                Vector3 pos = (Vector3)(Random.insideUnitCircle.normalized * Random.Range(minRadius, radius)) + player.transform.position; 
 
                 int index = Random.Range(0, enemies.Length);
                  Instantiate(enemies[index], pos, Quaternion.identity);

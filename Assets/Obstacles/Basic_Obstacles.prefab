@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4525261472386744}
   - component: {fileID: 212233249958988080}
   - component: {fileID: 58644540644158690}
-  - component: {fileID: 50341175555145284}
   - component: {fileID: 114594268851374692}
+  - component: {fileID: 50341175555145284}
   - component: {fileID: 114730217858886318}
   - component: {fileID: 114897322791418526}
   - component: {fileID: 114133523650575272}
@@ -58,7 +58,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce34a55c108e2704097d5ab37c96bb81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 8
   crashLength: 0.6
   crashStrengthMultiplier: 1
   playerPushBack: {fileID: 1737237601739482, guid: d3328023d44873c448a67d7a4e43652d,
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detection_range: 30
   movement_speed: 35
-  minimum_speed: 5
+  minimum_speed: 3
 --- !u!114 &114730217858886318
 MonoBehaviour:
   m_ObjectHideFlags: 1
