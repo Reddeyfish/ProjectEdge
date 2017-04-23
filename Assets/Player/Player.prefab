@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114806301501152726}
   - component: {fileID: 114534943315267552}
   - component: {fileID: 114869015040154958}
+  - component: {fileID: 114665066950358402}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -176,7 +177,7 @@ MonoBehaviour:
   rend: {fileID: 120423787361415370}
   leechPrefab: {fileID: 1355870372702412, guid: b1b5d3d339daa4f46a140534c99bc655,
     type: 2}
-  healthCost: 0
+  healthCost: 2
   cycleTime: 0.5
   range: 10
   damageScale: 15
@@ -234,6 +235,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335ebfa5a22b14941bfcd116f2bc3574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114665066950358402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043218444586414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d88cdcd7ae6b5541be806f1aa1e658d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathPrefab: {fileID: 1442835309251660, guid: b4f444b2596889942b67ae80b5a436a3,
+    type: 2}
 --- !u!114 &114806301501152726
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -35,6 +35,7 @@ public class LeechGun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(Time.timeScale == 0) {return; } // paused 
         if (lastShotTime + cycleTime >= Time.time) { return; }
         if (!Input.GetMouseButtonDown(0)) { return; }
         Debug.Log(lastShotTime + 1f >= Time.time);
