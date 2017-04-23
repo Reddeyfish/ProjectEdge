@@ -27,12 +27,14 @@ public class Shooting_Star : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.name == "Player")
         {
             Debug.Log("Justice rain from above lol");
+            GetComponent<ParticleSystem>().Play();
+            GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject,1);
         }
     }
 
