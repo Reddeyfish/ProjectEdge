@@ -22,7 +22,7 @@ public class display_health : MonoBehaviour {
 
     private Vector3 pos; // position of start, used for start pos of bars
     private Vector3 scale;
-    private static int max_health = 80; // number of bars to instantiate
+    private static float max_health = 80; // number of bars to instantiate
     private GameObject[] bar_array; // array of bars :V
     private int mod = 5;
 
@@ -41,9 +41,9 @@ public class display_health : MonoBehaviour {
         // set up bar array
         if (!debug)
         {
-            max_health = PlayerEdgeyness.getMaxTempEdgeyness();
+            max_health = player.GetComponent<Health>().MaxHealth;
         }
-        bar_array = new GameObject[max_health];
+        bar_array = new GameObject[(int)max_health];
 
         // instantiate bars
         for (int i = 0; i < max_health; i++)
@@ -79,7 +79,7 @@ public class display_health : MonoBehaviour {
         float bars = health / mod;
 
         // visual alert 
-        if (bars <= 3)
+        if (bars <= 5)
         {
             timer -= 1 * Time.deltaTime;
             if (timer <= 0)
