@@ -25,6 +25,7 @@ public class MeteorCrashing : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         rgdBody = GetComponent<Rigidbody2D>();
 
         //Get player attributes
