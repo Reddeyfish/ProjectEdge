@@ -31,7 +31,8 @@ public class LeechGun : MonoBehaviour {
         input = GetComponentInParent<PlayerMovement>();
         mask = LayerMask.GetMask(Tags.Layers.Enemy);
         health = GetComponentInParent<Health>();
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

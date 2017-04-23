@@ -5,6 +5,10 @@ using UnityEngine;
 public class ObstacleDeath : MonoBehaviour {
 
     public GameObject spawnOnDeath; //rewards/loot
+
+    [SerializeField]
+    protected GameObject deathEffects;
+
     Health health;
 
     private void Awake() {
@@ -18,6 +22,9 @@ public class ObstacleDeath : MonoBehaviour {
         for (int i = 0; i < amount; i++) {
             Instantiate(spawnOnDeath, transform.position, new Quaternion());
         }
+
+        SimplePool.Spawn(deathEffects);
+
         Destroy(this.transform.root.gameObject);
     }
 }

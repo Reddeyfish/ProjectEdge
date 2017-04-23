@@ -206,6 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnOnDeath: {fileID: 1174073239841912, guid: 51f3f279c33a354499d32efe74db67f0,
     type: 2}
+  deathEffects: {fileID: 1064961387474194, guid: e46af9b9cd99e564eb63a218d9ea8bfe,
+    type: 2}
 --- !u!114 &114726908457371396
 MonoBehaviour:
   m_ObjectHideFlags: 1
