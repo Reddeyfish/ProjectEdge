@@ -25,6 +25,8 @@ public class _PickUp : MonoBehaviour {
 
             Vector3 startingLocalPosition = transform.localPosition;
 
+            GetComponent<Collider2D>().enabled = false;
+
             Callback.DoLerp((float l) => {
                 float interpValue = Mathf.Pow(1 - l, 3);
                 transform.localPosition = interpValue * startingLocalPosition;
