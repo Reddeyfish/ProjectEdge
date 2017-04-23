@@ -33,23 +33,39 @@ public class MeteorCrashing : MonoBehaviour {
         previousVelocity = rgdBody.velocity;
     }
 
+    void FixedUpdate() {
+        previousVelocity = rgdBody.velocity;
+    }
+
     private bool canCrash() {
-        float angleOfVelocity = Mathf.Atan2(rgdBody.velocity.y, rgdBody.velocity.x);
-        float angleBetweenPlayerAndSelf = (Mathf.Atan2(player.transform.position.y - transform.position.y, player.transform.position.x - transform.position.x));
-        angleOfVelocity += angleOfVelocity < 0 ? 2 * Mathf.PI : 0;
-        angleBetweenPlayerAndSelf += angleBetweenPlayerAndSelf < 0 ? 2 * Mathf.PI : 0;
-        angleOfVelocity *= (180 / Mathf.PI);
-        angleBetweenPlayerAndSelf *= (180 / Mathf.PI);
+        //float angleOfVelocity = Mathf.Atan2(rgdBody.velocity.y, rgdBody.velocity.x);
+        //float angleBetweenPlayerAndSelf = (Mathf.Atan2(player.transform.position.y - transform.position.y, player.transform.position.x - transform.position.x));
+        //angleOfVelocity += angleOfVelocity < 0 ? 2 * Mathf.PI : 0;
+        //angleBetweenPlayerAndSelf += angleBetweenPlayerAndSelf < 0 ? 2 * Mathf.PI : 0;
+        //angleOfVelocity *= (180 / Mathf.PI);
+        //angleBetweenPlayerAndSelf *= (180 / Mathf.PI);
 
-        print(angleOfVelocity + " | " + angleBetweenPlayerAndSelf);
+        //print(angleOfVelocity + " | " + angleBetweenPlayerAndSelf);
 
-        return Mathf.Abs(angleOfVelocity - angleBetweenPlayerAndSelf) < 90;
+        //return Mathf.Abs(angleOfVelocity - angleBetweenPlayerAndSelf) < 90;
+        
+        Vector2 directionBetweenPlayerAndSelf = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y);
+
+
+        print(directionBetweenPlayerAndSelf + " | " + previousVelocity);
+        float dotProduct_CurVelocityAndDir = Vector2.Dot(directionBetweenPlayerAndSelf, previousVelocity);
+        float lengthMultiply = directionBetweenPlayerAndSelf.magnitude * previousVelocity.magnitude;
+        
+        print("Length: " + lengthMultiply + "Anser: " + Mathf.Acos(dotProduct_CurVelocityAndDir / lengthMultiply));
+        return Mathf.Acos(dotProduct_CurVelocityAndDir / lengthMultiply) < 80 * Mathf.Deg2Rad;
+
+
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("Player") && canCrash()) {
             GameObject tempPrefabPushBack = Instantiate(playerPushBack, collision.transform);
-            tempPrefabPushBack.GetComponent<PlayerPushBack>().Init(crashLength, damage, previousVelocity.sqrMagnitude);
+            tempPrefabPushBack.GetComponent<PlayerPushBack>().Init(crashLength, damage, previousVelocity, transform.position);
         }
         previousVelocity = rgdBody.velocity;
     }

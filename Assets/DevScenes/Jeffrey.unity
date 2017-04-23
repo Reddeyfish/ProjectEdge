@@ -303,7 +303,13 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114534943315267552, guid: 120d0848b1d4c61489b9061fcc559229,
+        type: 2}
+      propertyPath: radius
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114538521693281400, guid: 120d0848b1d4c61489b9061fcc559229, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 120d0848b1d4c61489b9061fcc559229, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1211789495

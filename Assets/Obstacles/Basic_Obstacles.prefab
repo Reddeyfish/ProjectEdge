@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114594268851374692}
   - component: {fileID: 50341175555145284}
   - component: {fileID: 114730217858886318}
+  - component: {fileID: 114133523650575272}
   m_Layer: 13
   m_Name: Basic_Obstacles
   m_TagString: Obstacle
@@ -79,6 +80,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.45
+--- !u!114 &114133523650575272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1352488312748610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce34a55c108e2704097d5ab37c96bb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  crashLength: 0.6
+  crashStrengthMultiplier: 1
+  playerPushBack: {fileID: 1737237601739482, guid: d3328023d44873c448a67d7a4e43652d,
+    type: 2}
 --- !u!114 &114594268851374692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c972030c3f9d94f4a9fa8c73a5ca752b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detection_range: 20
-  movement_speed: 15
+  detection_range: 30
+  movement_speed: 35
 --- !u!114 &114730217858886318
 MonoBehaviour:
   m_ObjectHideFlags: 1

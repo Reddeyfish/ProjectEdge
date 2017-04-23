@@ -7,7 +7,8 @@ public class PlayerPushBack : MonoBehaviour {
     private int damage;
     private CameraShakeScript camShake;
     private float crashLength;
-    private float currentVelocity;
+    private Vector2 currentVelocity;
+    private Vector2 currentPosition;
 
     //Player attributes
     private GameObject player;
@@ -20,10 +21,11 @@ public class PlayerPushBack : MonoBehaviour {
         
     }
 
-    public void Init(float crashLength, int damage, float currentVelocity) {
+    public void Init(float crashLength, int damage, Vector2 currentVelocity, Vector2 currentPosition) {
         this.crashLength = crashLength;
         this.damage = damage;
         this.currentVelocity = currentVelocity;
+        this.currentPosition = currentPosition;
         print(currentVelocity);
 
         camShake = Camera.main.GetComponent<CameraShakeScript>();
@@ -44,14 +46,13 @@ public class PlayerPushBack : MonoBehaviour {
 
         camShake.screenShake(crashLength / 2);
 
-        Vector2 direction = (player.transform.position - transform.position).normalized;
+        Vector2 direction = ((Vector2) player.transform.position - currentPosition).normalized;
         
-        playerRB.velocity = direction * currentVelocity;
+        playerRB.velocity = direction * currentVelocity.magnitude;
 
         while (currentCrashTime < crashLength) {
 
             currentCrashTime += Time.deltaTime;
-            print(string.Format("Getting crashed"));
             yield return 0;
         }
         //yield return new WaitForSeconds(crashLength);
