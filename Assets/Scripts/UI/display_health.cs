@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class display_health : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class display_health : MonoBehaviour {
     public GameObject next;
     public GameObject bar; // prefab for the bar that appears as edgeyness
     public GameObject alert;
+    public GameObject healthText;
     //public GameObject display; 
 
     private Vector3 pos; // position of start, used for start pos of bars
@@ -25,6 +27,7 @@ public class display_health : MonoBehaviour {
     private static float max_health = 80; // number of bars to instantiate
     private GameObject[] bar_array; // array of bars :V
     private int mod = 5;
+    private Text text_ref;
 
     private float offset; //= -20;
     private float timer = 1.0f;
@@ -32,7 +35,9 @@ public class display_health : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
+        text_ref = healthText.GetComponent<Text>();
+
         pos = start.transform.position;
         scale = start.transform.localScale;
 
@@ -63,6 +68,12 @@ public class display_health : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        // update max health
+        if (!debug)
+        {
+            max_health = player.GetComponent<Health>().MaxHealth;
+        }
+
         // turn off all bars
         foreach (GameObject b in bar_array)
         {
@@ -78,7 +89,7 @@ public class display_health : MonoBehaviour {
         // calc amount of bars
         float bars = health / mod;
 
-        // visual alert 
+        // visual alert when health is low
         if (bars <= 5)
         {
             timer -= 1 * Time.deltaTime;
@@ -94,6 +105,10 @@ public class display_health : MonoBehaviour {
             timer = 5.0f;
             alert.SetActive(false);
         }
+
+        // display health as text above bars
+        if (health > 0) { text_ref.text = "Health: " + (int)health + "/" + (max_health); }
+        else { text_ref.text = "Health: " + 0 + "/" + (max_health); }
 
         // turn on necessary bars
         for (int i = 0; i < bars && i < max_health; i++)
