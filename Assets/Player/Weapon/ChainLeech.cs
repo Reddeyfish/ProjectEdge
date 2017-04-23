@@ -7,6 +7,9 @@ public class ChainLeech : MonoBehaviour {
     [SerializeField]
     protected float initialDamage = 5f; //seconds of DoT, applied immediately
 
+    [SerializeField]
+    protected int numVertices = 4;
+
     Rigidbody2D rigid;
     SpringJoint2D attachJoint;
     LineRenderer rend;
@@ -20,11 +23,22 @@ public class ChainLeech : MonoBehaviour {
         rigid = GetComponent<Rigidbody2D>();
         attachJoint = GetComponent<SpringJoint2D>();
         rend = GetComponent<LineRenderer>();
+        rend.positionCount = numVertices;
+        rend.textureMode = LineTextureMode.Tile;
+        rend.useWorldSpace = false;
     }
 
 	// Update is called once per frame
 	void Update () {
-        rend.SetPosition(1, transform.InverseTransformPoint(target.TransformPoint(attachPoint)));
+        if(target == null) {
+            TargetHealth_onDeath();
+            return;
+        }
+        Vector3 destination = transform.InverseTransformPoint(target.TransformPoint(attachPoint));
+        for(int i = 0; i < numVertices; i++) {
+            float interpolation = ((float)(i)) / (numVertices - 1);
+            rend.SetPosition(i, destination * interpolation);
+        }
         targetHealth.Damage(damageScale * Time.deltaTime);
 	}
 
