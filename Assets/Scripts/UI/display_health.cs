@@ -102,7 +102,7 @@ public class display_health : MonoBehaviour {
         }
         else 
         { 
-            timer = 5.0f;
+            timer = 1.0f;
             alert.SetActive(false);
         }
 

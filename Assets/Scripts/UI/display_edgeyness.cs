@@ -25,6 +25,7 @@ public class display_edgeyness : MonoBehaviour {
     private static int max_edgeyness = 80; // number of bars to instantiate
     private GameObject[] bar_array ; // array of bars :V
     private Text text_ref;
+    private int mod = 2;
 
     private float offset = -20;
 
@@ -104,10 +105,22 @@ public class display_edgeyness : MonoBehaviour {
         }
 
         // turn on necessary bars
-        for (int i = 0; i < edgeyness && i < max_edgeyness; i++) 
+        if (isTemp)
         {
-            bar_array[i].SetActive(true);
-            //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
+            float bars = edgeyness / mod;
+            for (int i = 0; i < bars && i < max_edgeyness; i++)
+            {
+                bar_array[i].SetActive(true);
+                //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
+        else 
+        {
+            for (int i = 0; i < edgeyness && i < max_edgeyness; i++)
+            {
+                bar_array[i].SetActive(true);
+                //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
+            }
         }
 	}
 } //kmf
