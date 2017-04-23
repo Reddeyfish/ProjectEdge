@@ -32,7 +32,7 @@ public class Shooting_Star : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             Debug.Log("Justice rain from above lol");
-            GetComponent<ParticleSystem>().Play();
+            GetComponentInChildren<ParticleSystem>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
             Destroy(gameObject,1);
         }
