@@ -13,7 +13,7 @@ public class display_edgeyness : MonoBehaviour {
     public bool isTemp = false;
 
     // pls insert this stuff in inspector
-    public GameObject player;
+    //public GameObject player;
     public GameObject start; // obj w/ starting pos of bars
     public GameObject next;
     public GameObject bar; // prefab for the bar that appears as edgeyness
@@ -28,7 +28,7 @@ public class display_edgeyness : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
         pos = start.transform.position;
         scale = start.transform.localScale;
 
