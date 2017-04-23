@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114919329688144584}
   m_Layer: 0
   m_Name: Hunter
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   hunter_speed: 100
   acceleration: 11
   trigger: {fileID: 1784628561542536}
-  timer: 5
+  timer: 2
 --- !u!114 &114919329688144584
 MonoBehaviour:
   m_ObjectHideFlags: 1

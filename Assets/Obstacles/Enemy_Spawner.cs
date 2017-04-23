@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Enemy_Spawner : MonoBehaviour {
 
-    public GameObject prefab; //what to spawn; 
+    public GameObject Basic;
+    public GameObject Hunter;
+    public GameObject Star;//what to spawn; 
     GameObject player; // player
     public int numberOfObjects = 20;   // Maximum obstacles near by the player;
-    public float radius = 10f; // spawn range;
+    public float radius = 40f; // spawn range;
     Vector3 player_position; // player position;
 
-    GameObject[] obstacles; // array on 
+    GameObject[] obstacles; // array to detect all obstacles around you 
+    GameObject[] enemies; //prefabs of all enemies
     int count;
 
 
@@ -22,7 +25,16 @@ public class Enemy_Spawner : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
       player = GameObject.FindGameObjectWithTag("Player");
+        enemies = new GameObject[5];
+        enemies[0] = Basic;
+        enemies[1] = Hunter;
+        enemies[2] = Star;
+        enemies[3] = Basic;
+        enemies[4] = Basic;
+
+        //hard coded percentage;
 
 
     }
@@ -55,7 +67,8 @@ public class Enemy_Spawner : MonoBehaviour {
                     Vector3 pos = new Vector3(Random.Range(player_position.x - radius, player_position.x + radius),
                         Random.Range(player_position.y - radius, player_position.y + radius), 0);
 
-                 Instantiate(prefab, pos, Quaternion.identity);
+                int index = Random.Range(0, enemies.Length);
+                 Instantiate(enemies[index], pos, Quaternion.identity);
 
 
                 }
