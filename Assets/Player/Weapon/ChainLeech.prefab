@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialDamage: 5
+  numVertices: 4
 --- !u!120 &120641528768354424
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -119,13 +120,37 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 2
         time: 0
+        value: 0.24157524
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.099735044
+        value: 0.33258903
+        inSlope: 2.4089217
+        outSlope: 2.4089217
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.25872874
         value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.7264192
+        value: 0.991876
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0.21680772
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
+      m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
@@ -145,8 +170,8 @@ LineRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 50115
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -154,7 +179,7 @@ LineRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
