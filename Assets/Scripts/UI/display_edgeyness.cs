@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class display_edgeyness : MonoBehaviour {
 
@@ -23,11 +24,19 @@ public class display_edgeyness : MonoBehaviour {
     private Vector3 scale;
     private static int max_edgeyness = 80; // number of bars to instantiate
     private GameObject[] bar_array ; // array of bars :V
+    private Text text_ref;
 
     private float offset = -20;
 
 	// Use this for initialization
 	void Start () {
+        // set up text indicator for temp
+        if (isTemp) 
+        {
+            var t = GameObject.Find("TempText");
+            text_ref = t.GetComponent<Text>();
+        }
+
         //player = GameObject.Find("Player");
         pos = start.transform.position;
         scale = start.transform.localScale;
@@ -62,6 +71,12 @@ public class display_edgeyness : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // update max temp edgeyness
+        if (!debug && isTemp) 
+        {
+            max_edgeyness = PlayerEdgeyness.getMaxTempEdgeyness();
+        }
+
         // turn off all bars
         foreach (GameObject b in bar_array) 
         {
@@ -80,6 +95,14 @@ public class display_edgeyness : MonoBehaviour {
                 edgeyness = PlayerEdgeyness.getTempEdgeyness();
             }
         }
+
+        // display temp as text above bars
+        if (isTemp) 
+        {
+            if (edgeyness > 0) { text_ref.text = edgeyness + "/" + max_edgeyness; }
+            else { text_ref.text = 0 + "/" + max_edgeyness; }
+        }
+
         // turn on necessary bars
         for (int i = 0; i < edgeyness && i < max_edgeyness; i++) 
         {
