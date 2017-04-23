@@ -25,7 +25,6 @@ public class Vision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        trigger.GetComponent<SpriteRenderer>().enabled = false;//exclamation mark
 
         rigid = GetComponentInParent<Rigidbody2D>();
         Parent_Hunter = transform.root.gameObject;//chasing elements
@@ -40,7 +39,7 @@ public class Vision : MonoBehaviour {
         {
            
             chase = true;
-            trigger.GetComponent<SpriteRenderer>().enabled = true;
+            trigger.SetActive(true);
     
             // Make parent chase player
         }
