@@ -39,7 +39,7 @@ public class LeechGun : MonoBehaviour {
         if(Time.timeScale == 0) {return; } // paused 
         if (lastShotTime + cycleTime >= Time.time) { return; }
         if (!Input.GetMouseButtonDown(0)) { return; }
-        Debug.Log(lastShotTime + 1f >= Time.time);
+        //Debug.Log(lastShotTime + 1f >= Time.time);
         Vector2 aimingDirection = input.rawAimingInput.normalized;
 
 

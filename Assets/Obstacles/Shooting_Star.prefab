@@ -40,7 +40,9 @@ GameObject:
   - component: {fileID: 50254076971048952}
   - component: {fileID: 61512103788636678}
   - component: {fileID: 114941175980807300}
-  m_Layer: 0
+  - component: {fileID: 114468514587223696}
+  - component: {fileID: 114961728248900940}
+  m_Layer: 13
   m_Name: Shooting_Star
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -212,6 +214,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.58, y: 1.8}
   m_EdgeRadius: 0
+--- !u!114 &114468514587223696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142713116052806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a8e0b6720ec0942b1cb44413d14ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 75
 --- !u!114 &114941175980807300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,6 +241,19 @@ MonoBehaviour:
   damage: 25
   crashLength: 1.25
   movement_speed: 20
+--- !u!114 &114961728248900940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142713116052806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296910fcbd1670e409a2a2b2d3761736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnOnDeath: {fileID: 1343672185089784, guid: 24e6e816b9fc07b4a82dfd56be71971f,
+    type: 2}
 --- !u!198 &198403036364351260
 ParticleSystem:
   m_ObjectHideFlags: 1

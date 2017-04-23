@@ -16,7 +16,7 @@ public class _PickUp : MonoBehaviour {
 	}
 	
     void OnTriggerEnter2D(Collider2D collided) {
-        print("Hit");
+
         if (collided.CompareTag("Player")) {
             attributesObject.SetActive(true);
             attributesObject.transform.SetParent(collided.transform);

@@ -8,7 +8,7 @@ public class DisplayEdgeyness : MonoBehaviour {
     [SerializeField]
     protected Text text;
 
-    private void Awake() {
+    private void Start() {
         PlayerEdgeyness.onEdgeynessChange += PlayerEdgeyness_onEdgeynessChange;
         PlayerEdgeyness_onEdgeynessChange();
     }

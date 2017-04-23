@@ -24,6 +24,7 @@ public class Enemy_Spawner : MonoBehaviour {
 
 
     public float timer = 3f;
+    private float actualTimer;
     float current_time;
     
     // Use this for initialization
@@ -61,10 +62,12 @@ public class Enemy_Spawner : MonoBehaviour {
 //        Debug.Log(distance);
         numberOfObjects = (int)(distance/3)-1;
 
+        actualTimer = Mathf.Clamp(timer - ((int) (distance/20))/20f, .1f, timer);
+        print(string.Format("Timer: {0} | Actual Timer: {1} | Distance: {2}", timer, actualTimer, distance));
 
         if (count < numberOfObjects)
         {
-            if (current_time < timer)
+            if (current_time < actualTimer)
             {
                 current_time += Time.deltaTime;
             }

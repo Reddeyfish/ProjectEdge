@@ -24,7 +24,7 @@ public class Shooting_Star : MonoBehaviour
         float angle = 0; //look at 2D
         Vector3 relative = transform.InverseTransformPoint(player.transform.position);
         angle = Mathf.Atan2(relative.x, relative.y) * Mathf.Rad2Deg;
-        Debug.Log(-angle);
+        //Debug.Log(-angle);
         transform.Rotate(0, 0, Random.Range(-angle+20,-angle-20));
 
     }

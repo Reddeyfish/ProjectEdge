@@ -16,7 +16,7 @@ public class PlayerDeath : MonoBehaviour {
 
     private void Health_onDeath() {
         foreach (Renderer rend in transform.root.GetComponentsInChildren<Renderer>()) { rend.enabled = false; }
-
+        PlayerPrefs.DeleteAll();
         Instantiate(deathPrefab);
         health.onDeath -= Health_onDeath;
     }
