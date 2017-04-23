@@ -8,9 +8,6 @@ using UnityEngine.UI;
 /// </summary>
 public class BaseHealthRestore : AbstractPurchase {
 
-    [SerializeField]
-    protected float healthGain = 1;
-
     Health playerHealth;
 
     // Use this for initialization
@@ -19,14 +16,14 @@ public class BaseHealthRestore : AbstractPurchase {
     }
 
     protected override bool isPurchasable() {
-        return playerHealth.healthMissing != 0 && PlayerEdgeyness.getEdgeyness() > 0;
+        return playerHealth.healthMissing != 0; 
     }
 
     protected override int cost() {
-        return baseCost * (Mathf.Min(PlayerEdgeyness.getEdgeyness(), Mathf.CeilToInt(playerHealth.healthMissing)));
+        return baseCost;
     }
 
     protected override void Purchase() {
-        playerHealth.Heal(Mathf.Min(PlayerEdgeyness.getEdgeyness(), Mathf.CeilToInt(playerHealth.healthMissing)));
+        playerHealth.Heal(playerHealth.healthMissing);
     }
 }

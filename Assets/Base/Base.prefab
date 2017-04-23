@@ -1689,10 +1689,9 @@ MonoBehaviour:
   button: {fileID: 114350092731519504}
   buttonText: {fileID: 114929493286135768}
   labelText: {fileID: 114397702657444374}
-  labelFormat: Heal Health
-  baseCost: 1
+  labelFormat: Heal To Full
+  baseCost: 8
   playerPrefsKey: HealthRestore
-  healthGain: 1
 --- !u!114 &114776107071191412
 MonoBehaviour:
   m_ObjectHideFlags: 1
