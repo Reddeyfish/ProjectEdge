@@ -17,6 +17,7 @@ public class display_health : MonoBehaviour {
     public GameObject start; // obj w/ starting pos of bars
     public GameObject next;
     public GameObject bar; // prefab for the bar that appears as edgeyness
+    public GameObject alert;
     //public GameObject display; 
 
     private Vector3 pos; // position of start, used for start pos of bars
@@ -25,7 +26,8 @@ public class display_health : MonoBehaviour {
     private GameObject[] bar_array; // array of bars :V
     private int mod = 5;
 
-    private float offset = -20;
+    private float offset; //= -20;
+    private float timer = 1.0f;
 
     // Use this for initialization
     void Start()
@@ -73,12 +75,33 @@ public class display_health : MonoBehaviour {
         {
             health = player.GetComponent<Health>().HealthValue;
         }
-        // turn on necessary bars
+        // calc amount of bars
         float bars = health / mod;
+
+        // visual alert 
+        if (bars <= 3)
+        {
+            timer -= 1 * Time.deltaTime;
+            if (timer <= 0)
+            {
+                if (alert.activeSelf) { alert.SetActive(false); }
+                else { alert.SetActive(true); }
+                timer = 1.0f;
+            }
+        }
+        else 
+        { 
+            timer = 5.0f;
+            alert.SetActive(false);
+        }
+
+        // turn on necessary bars
         for (int i = 0; i < bars && i < max_health; i++)
         {
             bar_array[i].SetActive(true);
             //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
         }
+
+        
     }
 } //kmf
