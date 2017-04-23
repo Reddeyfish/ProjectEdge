@@ -194,11 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSprites:
   - {fileID: 21300000, guid: e35b465ff6ce57742ada1e0e6e796260, type: 3}
-  - {fileID: 21300000, guid: f2926864b4b721146b2ee74ef1391dd0, type: 3}
-  - {fileID: 21300000, guid: 6be5d0ef91dc259419dda062d20a2387, type: 3}
-  - {fileID: 21300000, guid: 0c86e7acfc1737d4883f8f49278fcf42, type: 3}
-  - {fileID: 21300000, guid: 3333f61c9abb3a04b970cc4eb5a3fe7c, type: 3}
-  - {fileID: 21300000, guid: 37aaee88c99e1854881f1a38a6c3b015, type: 3}
 --- !u!114 &114319763662743786
 MonoBehaviour:
   m_ObjectHideFlags: 1

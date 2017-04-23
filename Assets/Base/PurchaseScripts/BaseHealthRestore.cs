@@ -27,8 +27,8 @@ public class BaseHealthRestore : AbstractPurchase {
         playerHealth.Heal(playerHealth.healthMissing);
     }
 
-    protected override void UpdateText() {
-        base.UpdateText();
-        labelText.text = string.Format(labelFormat, healthGain);
-    }
+    //protected override void UpdateText() {
+    //    base.UpdateText();
+    //    labelText.text = string.Format(labelFormat, healthGain);
+    //}
 }

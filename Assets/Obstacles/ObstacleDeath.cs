@@ -23,7 +23,8 @@ public class ObstacleDeath : MonoBehaviour {
             Instantiate(spawnOnDeath, transform.position, new Quaternion());
         }
 
-        SimplePool.Spawn(deathEffects);
+        if (deathEffects)
+            SimplePool.Spawn(deathEffects);
 
         Destroy(this.transform.root.gameObject);
     }

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnOnDeath: {fileID: 1095389555143328, guid: f836d73afbbe7334b8feb70cf576549c,
     type: 2}
-  deathEffects: {fileID: 1064961387474194, guid: e46af9b9cd99e564eb63a218d9ea8bfe,
+  deathEffects: {fileID: 1142713116052806, guid: 6faa1960aaad03e4dafcddcd22d87e2b,
     type: 2}
 --- !u!212 &212233249958988080
 SpriteRenderer:
