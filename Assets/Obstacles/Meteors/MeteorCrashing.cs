@@ -61,8 +61,9 @@ public class MeteorCrashing : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Player") && canCrash()) {
-            GameObject tempPrefabPushBack = Instantiate(playerPushBack, collision.transform);
-            tempPrefabPushBack.GetComponent<PlayerPushBack>().Init(crashLength, damage, previousVelocity, transform.position);
+            collision.gameObject.GetComponent<StrikePlayer>().Strike(collision.transform, crashLength, damage, previousVelocity, transform.position);
+            //GameObject tempPrefabPushBack = Instantiate(playerPushBack, collision.transform);
+            //tempPrefabPushBack.GetComponent<PlayerPushBack>().Init(crashLength, damage, previousVelocity, transform.position);
         }
         previousVelocity = rgdBody.velocity;
     }

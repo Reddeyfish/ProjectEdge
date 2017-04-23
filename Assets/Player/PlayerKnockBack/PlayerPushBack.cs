@@ -26,7 +26,6 @@ public class PlayerPushBack : MonoBehaviour {
         this.damage = damage;
         this.currentVelocity = currentVelocity;
         this.currentPosition = currentPosition;
-        print(currentVelocity);
 
         camShake = Camera.main.GetComponent<CameraShakeScript>();
 

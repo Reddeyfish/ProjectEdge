@@ -28,7 +28,6 @@ public class Obstacle : MonoBehaviour {
 
         while (rb.velocity.magnitude < minimum_speed && i++ < 10000) {
             rb.AddForce(chosenVector);
-            print(rb.velocity.magnitude);
             yield return 0;
         }
     }
@@ -38,7 +37,7 @@ public class Obstacle : MonoBehaviour {
 
         if (collision.gameObject.name == "Player")
         {
-            Debug.Log("Bump");
+            //Debug.Log("Bump");
         }
     }
 

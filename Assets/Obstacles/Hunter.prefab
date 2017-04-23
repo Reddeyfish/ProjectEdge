@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212598510785150334}
   - component: {fileID: 68825435985047874}
   - component: {fileID: 114757724058626458}
+  - component: {fileID: 114726908457371396}
+  - component: {fileID: 61479347674391652}
   m_Layer: 0
   m_Name: Temp_Cone
   m_TagString: Untagged
@@ -100,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983444943767162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.19, y: -5.5400004, z: 0}
+  m_LocalPosition: {x: 7.17, y: -8.47, z: 0}
   m_LocalScale: {x: 0.7430306, y: 0.6595989, z: 1}
   m_Children:
   - {fileID: 4605439648102148}
@@ -142,13 +144,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.925
+--- !u!61 &61479347674391652
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337963207206754}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 4}
+    newSize: {x: 2, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4}
+  m_EdgeRadius: 0
 --- !u!68 &68825435985047874
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337963207206754}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -178,6 +205,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnOnDeath: {fileID: 1174073239841912, guid: 51f3f279c33a354499d32efe74db67f0,
     type: 2}
+--- !u!114 &114726908457371396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337963207206754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde0e225c071cdc4dadba8c547b69ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageInterval: 1
+  damage: 10
+  crashLength: 0.3
 --- !u!114 &114757724058626458
 MonoBehaviour:
   m_ObjectHideFlags: 1
