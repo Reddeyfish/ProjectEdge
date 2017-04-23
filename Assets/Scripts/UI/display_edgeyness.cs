@@ -37,7 +37,11 @@ public class display_edgeyness : MonoBehaviour {
         // set up bar array
         if (!debug) 
         {
-            max_edgeyness = PlayerEdgeyness.getMaxTempEdgeyness();
+            if (!isTemp)
+            {
+                //max_edgeyness = PlayerEdgeyness.getMaxEdgeyness();
+            }
+            else { max_edgeyness = PlayerEdgeyness.getMaxTempEdgeyness(); }
         }
         bar_array = new GameObject[max_edgeyness];
 
