@@ -14,7 +14,7 @@ public class ObstacleDeath : MonoBehaviour {
 
     private void Health_onDeath() {
         float distance = transform.position.magnitude;
-        float amount = 1 + (distance / 10) + Random.value; //random for dithering
+        float amount = 1 + (distance / 80) + Random.value; //random for dithering
         for (int i = 0; i < amount; i++) {
             Instantiate(spawnOnDeath, transform.position, new Quaternion());
         }
