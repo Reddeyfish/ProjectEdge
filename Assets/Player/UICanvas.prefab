@@ -696,6 +696,7 @@ MonoBehaviour:
   next: {fileID: 1539443122013400}
   bar: {fileID: 1175602859041310, guid: ac5fe322739eff949a739526005f560b, type: 2}
   alert: {fileID: 1565446340340580}
+  healthText: {fileID: 1767588477580548}
 --- !u!114 &114763760219691132
 MonoBehaviour:
   m_ObjectHideFlags: 1
