@@ -63,7 +63,7 @@ public class Enemy_Spawner : MonoBehaviour {
             else
             {
                 current_time = 0;
-                Debug.Log("Too Little,Spawn more edge.");
+                //Debug.Log("Too Little,Spawn more edge.");
                     Vector3 pos = new Vector3(Random.Range(player_position.x - radius, player_position.x + radius),
                         Random.Range(player_position.y - radius, player_position.y + radius), 0);
 
