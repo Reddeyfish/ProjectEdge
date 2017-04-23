@@ -8,6 +8,8 @@ public class Shooting_Star : MonoBehaviour
     GameObject player; //Fing the player
     Vector2 targetDirection;
     public float detection_range = 100f; // If exceed this range the object self-destructs.
+    public int damage = 10;
+    public float crashLength = 1f;
 
     public float movement_speed = 100f; // how fast the object is going on start.
     private void Start()
@@ -34,6 +36,9 @@ public class Shooting_Star : MonoBehaviour
             Debug.Log("Justice rain from above lol");
             GetComponentInChildren<ParticleSystem>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
+
+            collision.GetComponent<StrikePlayer>().Strike(collision.transform, crashLength, damage, gameObject.GetComponent<Rigidbody2D>().velocity, transform.position);
+
             Destroy(gameObject,1);
         }
     }

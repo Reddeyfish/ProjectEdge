@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296910fcbd1670e409a2a2b2d3761736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnOnDeath: {fileID: 0}
+  spawnOnDeath: {fileID: 1095389555143328, guid: f836d73afbbe7334b8feb70cf576549c,
+    type: 2}
 --- !u!212 &212233249958988080
 SpriteRenderer:
   m_ObjectHideFlags: 1

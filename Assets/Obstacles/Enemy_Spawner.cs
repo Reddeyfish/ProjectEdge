@@ -58,7 +58,7 @@ public class Enemy_Spawner : MonoBehaviour {
     {
         Base = GameObject.FindGameObjectWithTag("Base");
         distance = Vector3.Distance(this.transform.position, Base.transform.position);
-        Debug.Log(distance);
+//        Debug.Log(distance);
         numberOfObjects = (int)(distance/3)-1;
 
 
