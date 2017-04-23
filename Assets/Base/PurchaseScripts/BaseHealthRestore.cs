@@ -19,14 +19,14 @@ public class BaseHealthRestore : AbstractPurchase {
     }
 
     protected override bool isPurchasable() {
-        return playerHealth.healthMissing != 0;
+        return playerHealth.healthMissing != 0 && PlayerEdgeyness.getEdgeyness() > 0;
     }
 
     protected override int cost() {
-        return baseCost;
+        return baseCost * (Mathf.Min(PlayerEdgeyness.getEdgeyness(), Mathf.CeilToInt(playerHealth.healthMissing)));
     }
 
     protected override void Purchase() {
-        playerHealth.Heal(healthGain);
+        playerHealth.Heal(Mathf.Min(PlayerEdgeyness.getEdgeyness(), Mathf.CeilToInt(playerHealth.healthMissing)));
     }
 }

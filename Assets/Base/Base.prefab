@@ -1142,7 +1142,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restore 1 Health
+  m_Text: Heal health
 --- !u!114 &114399604988574258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   button: {fileID: 114350092731519504}
   buttonText: {fileID: 114929493286135768}
   labelText: {fileID: 114397702657444374}
-  labelFormat: Restore 1 Health
+  labelFormat: Heal Health
   baseCost: 1
   playerPrefsKey: HealthRestore
   healthGain: 1
