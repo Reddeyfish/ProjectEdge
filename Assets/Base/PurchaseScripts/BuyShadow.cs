@@ -14,11 +14,8 @@ public class BuyShadow : AbstractOneTimePurchase {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    protected override bool isPurchasable() {
-        return true;
-    }
-
     protected override void Purchase() {
+        print("Creating shadow");
         GameObject newShadow = Instantiate(shadowObject, Vector2.down, shadowObject.transform.rotation);
         
     }

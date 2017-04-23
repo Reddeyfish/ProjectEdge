@@ -50,13 +50,10 @@ public class MeteorCrashing : MonoBehaviour {
         //return Mathf.Abs(angleOfVelocity - angleBetweenPlayerAndSelf) < 90;
         
         Vector2 directionBetweenPlayerAndSelf = new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y);
-
-
-        print(directionBetweenPlayerAndSelf + " | " + previousVelocity);
+        
         float dotProduct_CurVelocityAndDir = Vector2.Dot(directionBetweenPlayerAndSelf, previousVelocity);
         float lengthMultiply = directionBetweenPlayerAndSelf.magnitude * previousVelocity.magnitude;
         
-        print("Length: " + lengthMultiply + "Anser: " + Mathf.Acos(dotProduct_CurVelocityAndDir / lengthMultiply));
         return Mathf.Acos(dotProduct_CurVelocityAndDir / lengthMultiply) < 80 * Mathf.Deg2Rad;
 
 

@@ -11,16 +11,14 @@ public class GivePoints : _PickUpAttribute {
     protected int points;
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
         base.Start();
         playerHealth = player.GetComponent<Health>();
         activate();
 	}
 
     public override void activate() {
-        //player.transform.localScale *= 3;
         playerEdgeyness.changeTempEdgeynessBy(points);
-        playerHealth.Damage(1);
 
         DeleteSelf();
     }
