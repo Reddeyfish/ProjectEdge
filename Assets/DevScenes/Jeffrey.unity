@@ -608,18 +608,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4319063850475220, guid: 51f3f279c33a354499d32efe74db67f0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319063850475220, guid: 51f3f279c33a354499d32efe74db67f0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174073239841912, guid: 51f3f279c33a354499d32efe74db67f0, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51f3f279c33a354499d32efe74db67f0, type: 2}
   m_IsPrefabParent: 0
@@ -661,10 +649,6 @@ Prefab:
     - target: {fileID: 4010580502375006, guid: f836d73afbbe7334b8feb70cf576549c, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1095389555143328, guid: f836d73afbbe7334b8feb70cf576549c, type: 2}
-      propertyPath: m_Name
-      value: Small_Points_Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f836d73afbbe7334b8feb70cf576549c, type: 2}

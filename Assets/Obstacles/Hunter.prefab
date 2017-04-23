@@ -57,7 +57,9 @@ GameObject:
   - component: {fileID: 50098383577192882}
   - component: {fileID: 58759191129085232}
   - component: {fileID: 114919329688144584}
-  m_Layer: 0
+  - component: {fileID: 114856524714056148}
+  - component: {fileID: 114167975789748810}
+  m_Layer: 13
   m_Name: Hunter
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -163,6 +165,19 @@ EdgeCollider2D:
   - {x: 1.005829, y: 0.5334661}
   - {x: 0.9767325, y: 1.347406}
   - {x: 0.8944876, y: 2.0937104}
+--- !u!114 &114167975789748810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983444943767162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296910fcbd1670e409a2a2b2d3761736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnOnDeath: {fileID: 1174073239841912, guid: 51f3f279c33a354499d32efe74db67f0,
+    type: 2}
 --- !u!114 &114757724058626458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,6 +193,18 @@ MonoBehaviour:
   acceleration: 11
   trigger: {fileID: 1784628561542536}
   timer: 2
+--- !u!114 &114856524714056148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983444943767162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a8e0b6720ec0942b1cb44413d14ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 135
 --- !u!114 &114919329688144584
 MonoBehaviour:
   m_ObjectHideFlags: 1
