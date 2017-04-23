@@ -9,6 +9,7 @@ public class Enemy_Spawner : MonoBehaviour {
     public GameObject Hunter;
     public GameObject Star;//what to spawn; 
     GameObject player; // player
+    GameObject Base;//base
     public int numberOfObjects = 20;   // Maximum obstacles near by the player;
     public float radius = 40f; // spawn range;
     Vector3 player_position; // player position;
@@ -17,6 +18,8 @@ public class Enemy_Spawner : MonoBehaviour {
     GameObject[] enemies; //prefabs of all enemies
     int count;
 
+
+    float distance; //distance from base
 
 
 
@@ -53,7 +56,12 @@ public class Enemy_Spawner : MonoBehaviour {
     }
     void Spawn()
     {
-     
+        Base = GameObject.FindGameObjectWithTag("Base");
+        distance = Vector3.Distance(this.transform.position, Base.transform.position);
+        Debug.Log(distance);
+        numberOfObjects = (int)(distance/2)-1;
+
+
         if (count < numberOfObjects)
         {
             if (current_time < timer)
