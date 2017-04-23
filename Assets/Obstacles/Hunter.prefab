@@ -177,6 +177,7 @@ MonoBehaviour:
   hunter_speed: 100
   acceleration: 11
   trigger: {fileID: 1784628561542536}
+  timer: 5
 --- !u!114 &114919329688144584
 MonoBehaviour:
   m_ObjectHideFlags: 1
