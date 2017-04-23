@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy_Spawner : MonoBehaviour {
 
     public GameObject Basic;
+    public GameObject BiggerBasic;
     public GameObject Hunter;
     public GameObject Star;//what to spawn; 
     GameObject player; // player
@@ -32,7 +33,7 @@ public class Enemy_Spawner : MonoBehaviour {
         enemies[1] = Hunter;
         enemies[2] = Star;
         enemies[3] = Basic;
-        enemies[4] = Basic;
+        enemies[4] = BiggerBasic;
 
         //hard coded percentage;
 

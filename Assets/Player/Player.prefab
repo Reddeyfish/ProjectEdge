@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 114501791896638934}
   - component: {fileID: 114806301501152726}
   - component: {fileID: 114534943315267552}
-  - component: {fileID: 114538521693281400}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -145,6 +144,7 @@ MonoBehaviour:
   leechPrefab: {fileID: 1355870372702412, guid: b1b5d3d339daa4f46a140534c99bc655,
     type: 2}
   range: 10
+  damageScale: 15
 --- !u!114 &114501791896638934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,25 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867b4aa7f17e0504e9479b176e67b42a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1352488312748610, guid: 868f76293bbf4314f94c5b1cf8f0cd61, type: 2}
+  Basic: {fileID: 1352488312748610, guid: 868f76293bbf4314f94c5b1cf8f0cd61, type: 2}
+  BiggerBasic: {fileID: 1456350033908278, guid: e6e2ea2652dc94647b53d55889ad7471,
+    type: 2}
+  Hunter: {fileID: 1983444943767162, guid: 35b7885079850574196a7128c1260560, type: 2}
+  Star: {fileID: 1142713116052806, guid: 6faa1960aaad03e4dafcddcd22d87e2b, type: 2}
   numberOfObjects: 20
-  radius: 10
-  timer: 3
---- !u!114 &114538521693281400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1043218444586414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867b4aa7f17e0504e9479b176e67b42a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1352488312748610, guid: 868f76293bbf4314f94c5b1cf8f0cd61, type: 2}
-  numberOfObjects: 20
-  radius: 10
-  timer: 3
+  radius: 25
+  timer: 1
 --- !u!114 &114572796365859460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,7 +231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e35c262b8243c3046963e89eeb429cb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

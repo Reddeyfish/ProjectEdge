@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleDeath : MonoBehaviour {
 
+    public GameObject spawnOnDeath;
     Health health;
 
     private void Awake() {
@@ -12,6 +13,7 @@ public class ObstacleDeath : MonoBehaviour {
     }
 
     private void Health_onDeath() {
+        Instantiate(spawnOnDeath, transform.position, new Quaternion());
         Destroy(this.transform.root.gameObject);
     }
 }

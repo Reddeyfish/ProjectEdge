@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114459699106410052}
   - component: {fileID: 61261804341565612}
   m_Layer: 11
-  m_Name: Temp_Pickup
+  m_Name: Small_Points_Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
