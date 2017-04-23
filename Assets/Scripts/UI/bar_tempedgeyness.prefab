@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222922480320583072}
   - component: {fileID: 114942689908111154}
   m_Layer: 5
-  m_Name: bar
+  m_Name: bar_tempedgeyness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

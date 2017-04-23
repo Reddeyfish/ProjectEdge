@@ -309,7 +309,6 @@ MonoBehaviour:
   debug: 0
   edgeyness: 0
   isTemp: 0
-  player: {fileID: 0}
   start: {fileID: 1477723629956130}
   next: {fileID: 1840886214631954}
   bar: {fileID: 0}
@@ -327,7 +326,6 @@ MonoBehaviour:
   debug: 0
   edgeyness: 0
   isTemp: 1
-  player: {fileID: 0}
   start: {fileID: 1983786397119688}
   next: {fileID: 1438884039981744}
   bar: {fileID: 1127157011780228, guid: 444db0bc17b2cc64184f75c55fd25390, type: 2}
