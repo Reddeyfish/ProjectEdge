@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114730217858886318}
   - component: {fileID: 114897322791418526}
   - component: {fileID: 114133523650575272}
+  - component: {fileID: 114082208140857426}
   m_Layer: 13
   m_Name: Basic_Obstacles
   m_TagString: Obstacle
@@ -81,6 +82,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.45
+--- !u!114 &114082208140857426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1352488312748610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e6304ae30ee404e90129d697ae7cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114133523650575272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detection_range: 30
   movement_speed: 35
-  minimum_speed: 2
+  minimum_speed: 0
 --- !u!114 &114730217858886318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,8 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296910fcbd1670e409a2a2b2d3761736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnOnDeath: {fileID: 1095389555143328, guid: f836d73afbbe7334b8feb70cf576549c,
-    type: 2}
+  spawnOnDeath: {fileID: 0}
 --- !u!212 &212233249958988080
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -149,7 +160,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e13ed1d9a6aa0dd4791886028c747e9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

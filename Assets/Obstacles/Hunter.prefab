@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 114919329688144584}
   - component: {fileID: 114856524714056148}
   - component: {fileID: 114167975789748810}
+  - component: {fileID: 114995748461868394}
   m_Layer: 13
   m_Name: Hunter
   m_TagString: Obstacle
@@ -257,6 +258,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da40cfaaa20a618409254702f89fc63c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114995748461868394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983444943767162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e6304ae30ee404e90129d697ae7cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212049055305148496
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -270,7 +282,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e13ed1d9a6aa0dd4791886028c747e9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

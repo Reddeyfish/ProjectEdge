@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222847755530340974}
   - component: {fileID: 114170197950402978}
   m_Layer: 5
-  m_Name: bar_healthandedgeyness
+  m_Name: bar_health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
