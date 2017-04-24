@@ -16,11 +16,11 @@ public class DeathScripting : MonoBehaviour {
             MaterialPropertyBlock block = new MaterialPropertyBlock();
             block.SetFloat("_DistortionStrength", Mathf.Lerp(0.05f, 0, Mathf.Pow(l, 2)));
             rend.SetPropertyBlock(block);
-        }, 5f, this).FollowedBy(() => UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex), this);
-    }
-	
-	// Update is called once per frame
-	void Update () {
+        }, 5f, this).FollowedBy(() => UnityEngine.SceneManagement.SceneManager.LoadScene(3), this);
+    }//UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
