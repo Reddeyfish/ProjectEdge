@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4525261472386744}
   - component: {fileID: 212233249958988080}
   - component: {fileID: 58644540644158690}
-  - component: {fileID: 114594268851374692}
   - component: {fileID: 50341175555145284}
+  - component: {fileID: 114594268851374692}
   - component: {fileID: 114730217858886318}
   - component: {fileID: 114897322791418526}
   - component: {fileID: 114133523650575272}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c972030c3f9d94f4a9fa8c73a5ca752b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detection_range: 30
+  detection_range: 50
   movement_speed: 35
   minimum_speed: 3
 --- !u!114 &114730217858886318
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a8e0b6720ec0942b1cb44413d14ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 125
 --- !u!114 &114897322791418526
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4443336566181350}
   - component: {fileID: 212619028198264628}
   - component: {fileID: 58639908591140404}
-  - component: {fileID: 114929607022908348}
   - component: {fileID: 50305918472008564}
+  - component: {fileID: 114929607022908348}
   - component: {fileID: 114871863821749920}
   - component: {fileID: 114948885420750016}
   - component: {fileID: 114995752030104566}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a8e0b6720ec0942b1cb44413d14ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 300
 --- !u!114 &114929607022908348
 MonoBehaviour:
   m_ObjectHideFlags: 1
