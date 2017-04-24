@@ -71,4 +71,11 @@ public class LeechGun : MonoBehaviour {
         GameObject leech = SimplePool.Spawn(leechPrefab, transform.position);
         leech.GetComponent<ChainLeech>().Init(hit, damageScale);
     }
+
+    public void changeDamageScale(int amount) {
+        damageScale += amount;
+    }
+    public void changeRangeScale(int amount) {
+        range += amount;
+    }
 }

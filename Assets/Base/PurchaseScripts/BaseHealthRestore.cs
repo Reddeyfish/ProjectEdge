@@ -10,13 +10,16 @@ public class BaseHealthRestore : AbstractPurchase {
 
     Health playerHealth;
 
+    [SerializeField]
+    private int healthRestore;
+
     // Use this for initialization
     void Awake() {
         playerHealth = GameObject.FindGameObjectWithTag(Tags.Player).transform.root.GetComponentInChildren<Health>();
     }
 
     protected override bool isPurchasable() {
-        return playerHealth.healthMissing != 0; 
+        return playerHealth.healthMissing != 0;
     }
 
     protected override int cost() {
@@ -24,11 +27,15 @@ public class BaseHealthRestore : AbstractPurchase {
     }
 
     protected override void Purchase() {
+        /* For Restoring full Health
         playerHealth.Heal(playerHealth.healthMissing);
+        */
+        /* For Restory some Health */
+        playerHealth.Heal(healthRestore);
     }
 
-    //protected override void UpdateText() {
-    //    base.UpdateText();
-    //    labelText.text = string.Format(labelFormat, healthGain);
-    //}
+    protected override void UpdateText() {
+        base.UpdateText();
+        labelText.text = string.Format(labelFormat, healthRestore);
+    }
 }

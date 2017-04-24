@@ -16,7 +16,8 @@ public class UpgradeMaxHealth : AbstractPurchase {
 
     // Use this for initialization
     void Awake() {
-        playerHealth = GameObject.FindGameObjectWithTag(Tags.Player).transform.root.GetComponentInChildren<Health>();
+        base.Awake();
+        playerHealth = player.transform.root.GetComponentInChildren<Health>();
     }
 
     protected override bool isPurchasable() {

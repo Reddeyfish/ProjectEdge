@@ -27,7 +27,6 @@ public abstract class AbstractOneTimePurchase : AbstractPurchase {
     }
 
     protected override void UpdateText() {
-        print("Updated");
         if (numUpgrades == 0) {
             buttonText.text = string.Format(costFormat, cost());
             labelText.text = string.Format(labelFormat, "");

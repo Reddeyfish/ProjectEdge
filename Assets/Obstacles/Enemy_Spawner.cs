@@ -63,7 +63,7 @@ public class Enemy_Spawner : MonoBehaviour {
 //        Debug.Log(distance);
         numberOfObjects = (int)(distance/3)-1;
 
-        actualTimer = Mathf.Clamp(timer - timer * (((int) (distance/30))/20f), .1f, timer);
+        actualTimer = Mathf.Clamp(timer - timer * (((int) (distance/20))/15f), .05f, timer);
 
         if (count < numberOfObjects)
         {

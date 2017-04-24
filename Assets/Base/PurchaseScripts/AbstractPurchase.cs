@@ -28,17 +28,22 @@ public abstract class AbstractPurchase : MonoBehaviour {
     protected const string costFormat = "{0} Edgeyness";
 
     protected int numUpgrades = 0;
+    protected GameObject player;
 
-    private void Start() {
+    protected void Start() {
         if (!PlayerPrefs.HasKey(playerPrefsKey)) { return; }
 
         int numExistingUpgrades = PlayerPrefs.GetInt(playerPrefsKey);
-        Debug.Log(numExistingUpgrades);
+        //Debug.Log(numExistingUpgrades);
         for (int i = 0; i < numExistingUpgrades; i++) {
             Purchase();
             numUpgrades++;
         }
         CheckPurchasable();
+    }
+
+    protected void Awake() {
+        player = GameObject.FindGameObjectWithTag(Tags.Player);
     }
 
     protected virtual void OnEnable() {
