@@ -16,6 +16,8 @@ public class PlayerPushBack : MonoBehaviour {
     private PlayerMovement playerMovement;
     private Rigidbody2D playerRB;
 
+    private bool pushForward = true;
+
     // Use this for initialization
     void Start () {
         
@@ -37,6 +39,11 @@ public class PlayerPushBack : MonoBehaviour {
         StartCoroutine(crashPlayer());
     }
 
+    public void Init(float crashLength, int damage, Vector2 currentVelocity, Vector2 currentPosition, bool pushForward) {
+        this.pushForward = pushForward;
+        this.Init(crashLength, damage, currentVelocity, currentPosition);
+    }
+
     protected IEnumerator crashPlayer() {
         float currentCrashTime = 0;
 
@@ -45,7 +52,7 @@ public class PlayerPushBack : MonoBehaviour {
 
         camShake.screenShake(crashLength * (3/4f));
 
-        Vector2 direction = ((Vector2) player.transform.position - currentPosition).normalized;
+        Vector2 direction = ((Vector2) player.transform.position - currentPosition).normalized * (pushForward ? 1 : -1);
         
         playerRB.velocity = direction * currentVelocity.magnitude;
 

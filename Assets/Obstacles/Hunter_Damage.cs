@@ -7,6 +7,7 @@ public class Hunter_Damage : MonoBehaviour {
     public float damageInterval = 1f;
     public int damage = 10;
     public float crashLength = .4f;
+    public float suctionPowerMultiplier = 1f;
     private float timeCounter;
     
 
@@ -15,7 +16,7 @@ public class Hunter_Damage : MonoBehaviour {
             return;
         timeCounter += Time.deltaTime;
         if (timeCounter > damageInterval) {
-            collided.GetComponent<StrikePlayer>().Strike(collided.transform, crashLength, damage, (collided.transform.position - transform.position).normalized, transform.position);
+            collided.GetComponent<StrikePlayer>().Strike(collided.transform, crashLength, damage, (transform.parent.position - collided.transform.position).normalized * suctionPowerMultiplier, transform.position, false);
             timeCounter = 0;
         }
     }
