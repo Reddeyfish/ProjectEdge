@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DevScenes/TitleScreen.unity
     guid: 2ffd37dad2c379541991c253c5b1b776
-  - enabled: 1
+  - enabled: 0
     path: Assets/DevScenes/Tina.unity
     guid: cd69f4856f774e645a0ad439dcb1e571
+  - enabled: 1
+    path: Assets/DevScenes/Katherine.unity
+    guid: 68d1fd0449ebe7e4da1f73db9c0f3953
   - enabled: 1
     path: Assets/DevScenes/Help Scene.unity
     guid: 95afa11339482a54fa3887225d5f00a7
   - enabled: 1
     path: Assets/DevScenes/GameOver.unity
-    guid: 00000000000000000000000000000000
+    guid: 99fc71a1c5a61f04a99a742528a9b744
