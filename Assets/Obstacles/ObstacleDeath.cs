@@ -18,7 +18,7 @@ public class ObstacleDeath : MonoBehaviour {
 
     private void Health_onDeath() {
         float distance = transform.position.magnitude;
-        float amount = 1 + (distance / 80) + Random.value; //random for dithering
+        float amount = 1 + (distance / 80) + Random.value + (PlayerPrefs.HasKey("BuyShadow") ? 1 : 0); //random for dithering, Shadow for more spawns
         for (int i = 0; i < amount; i++) {
             Instantiate(spawnOnDeath, transform.position, new Quaternion());
         }

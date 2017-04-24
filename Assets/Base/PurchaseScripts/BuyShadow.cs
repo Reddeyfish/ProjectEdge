@@ -11,8 +11,8 @@ public class BuyShadow : AbstractOneTimePurchase {
     protected override void Purchase() {
         print(player);
         GameObject newShadow = Instantiate(shadowObject, new Vector2(), new Quaternion(0, 0, 90, 0), player.transform);
-        newShadow.transform.localPosition = new Vector2(-1, 0);
-        newShadow.transform.localRotation = Quaternion.Euler(0, 0, -90);
+        newShadow.transform.localPosition = new Vector2(0, -1);
+        newShadow.transform.localRotation = Quaternion.Euler(0, 0, 0);
 
     }
 }

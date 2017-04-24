@@ -50,6 +50,7 @@ public abstract class AbstractPurchase : MonoBehaviour {
     }
 
     protected virtual void OnEnable() {
+        PlayerEdgeyness.onEdgeynessChange += CheckPurchasable;
         CheckPurchasable();
     }
 
