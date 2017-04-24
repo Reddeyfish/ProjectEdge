@@ -28,4 +28,8 @@ public class UpgradeMaxHealth : AbstractPurchase {
         playerHealth.ResizeMaxHealth(playerHealth.MaxHealth + capacityIncrease);
         playerHealth.Heal(capacityIncrease);
     }
+
+	protected override int cost() {
+		return baseCost * (int)Mathf.Pow(2, numUpgrades); //Mathf.
+	}
 }
