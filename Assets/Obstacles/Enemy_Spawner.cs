@@ -83,7 +83,7 @@ public class Enemy_Spawner : MonoBehaviour {
                 Health enemyHealth = newEnemy.GetComponent<Health>();
 
                 enemyHealth.ResizeMaxHealth(enemyHealth.MaxHealth + enemyHealth.MaxHealth * (distance/400f) );
-
+                enemyHealth.Heal(enemyHealth.MaxHealth);
 
                 }
 
