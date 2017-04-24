@@ -40,6 +40,9 @@ public abstract class AbstractPurchase : MonoBehaviour {
             numUpgrades++;
         }
         CheckPurchasable();
+
+        PlayerEdgeyness.onEdgeynessChange += CheckPurchasable;
+        //PlayerEdgeyness.onEdgeynessChange += delegate { print("Changed"); };
     }
 
     protected void Awake() {
