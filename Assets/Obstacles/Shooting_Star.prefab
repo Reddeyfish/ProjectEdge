@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detection_range: 80
   damage: 16
-  crashLength: 1.25
+  crashLength: 1.1
   movement_speed: 30
 --- !u!114 &114961728248900940
 MonoBehaviour:
