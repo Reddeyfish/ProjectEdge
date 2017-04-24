@@ -24,7 +24,8 @@ public class display_health : MonoBehaviour {
 
     private Vector3 pos; // position of start, used for start pos of bars
     private Vector3 scale;
-    private float max_health = 80; // number of bars to instantiate
+    private float max_health = 80; 
+    private int total_bars = 80;// number of bars to instantiate
     private GameObject[] bar_array; // array of bars :V
     private int mod = 5;
     private Text text_ref;
@@ -49,10 +50,10 @@ public class display_health : MonoBehaviour {
         {
             max_health = player.GetComponent<Health>().MaxHealth;
         }
-        bar_array = new GameObject[(int)max_health];
+        bar_array = new GameObject[total_bars];
 
         // instantiate bars
-        for (int i = 0; i < max_health; i++)
+        for (int i = 0; i < total_bars; i++)
         {
             // disp: x + (i * -10) <- adds offset to each bar pos so that they don't display on top of eachother
             Vector3 newpos = new Vector3(pos.x + (i * offset), pos.y, pos.z);
@@ -118,7 +119,7 @@ public class display_health : MonoBehaviour {
         else { text_ref.text = "Health: " + 0 + "/" + (max_health); }
 
         // turn on necessary bars
-        for (int i = 0; i < bars && i < max_health; i++)
+        for (int i = 0; i < bars && i < total_bars; i++)
         {
             bar_array[i].SetActive(true);
             //bar_array[i].transform.localScale = new Vector3(1, 1, 1);

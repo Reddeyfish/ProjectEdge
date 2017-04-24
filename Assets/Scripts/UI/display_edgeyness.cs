@@ -23,6 +23,7 @@ public class display_edgeyness : MonoBehaviour {
     private Vector3 pos; // position of start, used for start pos of bars
     private Vector3 scale;
     private int max_edgeyness = 100; // number of bars to instantiate
+    private int total_bars = 100;
     private GameObject[] bar_array ; // array of bars :V
     private Text text_ref;
     private int mod = 5;
@@ -53,10 +54,10 @@ public class display_edgeyness : MonoBehaviour {
             }
             else { max_edgeyness = PlayerEdgeyness.getMaxTempEdgeyness(); }
         }
-        bar_array = new GameObject[max_edgeyness];
+        bar_array = new GameObject[total_bars];
 
         // instantiate bars
-        for (int i = 0; i < max_edgeyness; i++)
+        for (int i = 0; i < total_bars; i++)
         {
             // disp: x + (i * -10) <- adds offset to each bar pos so that they don't display on top of eachother
             Vector3 newpos = new Vector3(pos.x + (i * offset), pos.y, pos.z);
@@ -116,7 +117,7 @@ public class display_edgeyness : MonoBehaviour {
         }
         else 
         {
-            for (int i = 0; i < edgeyness && i < max_edgeyness; i++)
+            for (int i = 0; i < edgeyness && i < total_bars; i++)
             {
                 bar_array[i].SetActive(true);
                 //bar_array[i].transform.localScale = new Vector3(1, 1, 1);
