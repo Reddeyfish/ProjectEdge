@@ -22,8 +22,8 @@ public class display_edgeyness : MonoBehaviour {
 
     private Vector3 pos; // position of start, used for start pos of bars
     private Vector3 scale;
-    private int max_edgeyness = 100; // number of bars to instantiate
-    private int total_bars = 100;
+    private int max_edgeyness = 100; 
+    private int total_bars = 100;// number of bars to instantiate
     private GameObject[] bar_array ; // array of bars :V
     private Text text_ref;
     private int mod = 5;
