@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/DevScenes/TitleScreen.unity
+    guid: 2ffd37dad2c379541991c253c5b1b776
+  - enabled: 1
+    path: Assets/DevScenes/Tina.unity
+    guid: 00000000000000000000000000000000
