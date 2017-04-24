@@ -277,11 +277,6 @@ RectTransform:
   m_AnchoredPosition: {x: -78.40001, y: 75.94994}
   m_SizeDelta: {x: 121, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &508249415 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1393297041477058, guid: e5abca8f6ed21174ebbcf34cc9baf4b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1774018163}
 --- !u!1001 &593519231
 Prefab:
   m_ObjectHideFlags: 0
@@ -1040,26 +1035,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1323899733}
-    - target: {fileID: 114272248817483762, guid: e5abca8f6ed21174ebbcf34cc9baf4b9,
-        type: 2}
-      propertyPath: healthText
-      value: 
-      objectReference: {fileID: 508249415}
-    - target: {fileID: 114979697476069992, guid: e5abca8f6ed21174ebbcf34cc9baf4b9,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114979697476069992, guid: e5abca8f6ed21174ebbcf34cc9baf4b9,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.5147059
-      objectReference: {fileID: 0}
-    - target: {fileID: 114979697476069992, guid: e5abca8f6ed21174ebbcf34cc9baf4b9,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.5147059
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5abca8f6ed21174ebbcf34cc9baf4b9, type: 2}
   m_IsPrefabParent: 0

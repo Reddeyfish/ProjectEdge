@@ -28,6 +28,7 @@ public class display_health : MonoBehaviour {
     private GameObject[] bar_array; // array of bars :V
     private int mod = 5;
     private Text text_ref;
+    private AudioSource beep;
 
     private float offset; //= -20;
     private float timer = 1.0f;
@@ -63,6 +64,9 @@ public class display_health : MonoBehaviour {
             bar_array[i] = newbar;
 
         }
+
+        // for alert
+        beep = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -96,7 +100,10 @@ public class display_health : MonoBehaviour {
             if (timer <= 0)
             {
                 if (alert.activeSelf) { alert.SetActive(false); }
-                else { alert.SetActive(true); }
+                else { 
+                    alert.SetActive(true);
+                    beep.Play();
+                }
                 timer = 1.0f;
             }
         }
