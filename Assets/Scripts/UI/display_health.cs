@@ -24,7 +24,7 @@ public class display_health : MonoBehaviour {
 
     private Vector3 pos; // position of start, used for start pos of bars
     private Vector3 scale;
-    private static float max_health = 80; // number of bars to instantiate
+    private float max_health = 80; // number of bars to instantiate
     private GameObject[] bar_array; // array of bars :V
     private int mod = 5;
     private Text text_ref;
