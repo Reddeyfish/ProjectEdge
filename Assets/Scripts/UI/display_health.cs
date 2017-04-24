@@ -90,7 +90,7 @@ public class display_health : MonoBehaviour {
         float bars = health / mod;
 
         // visual alert when health is low
-        if (bars <= 5)
+        if (bars <= 7)
         {
             timer -= 1 * Time.deltaTime;
             if (timer <= 0)
