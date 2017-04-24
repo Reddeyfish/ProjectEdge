@@ -10,4 +10,7 @@ EditorBuildSettings:
     guid: 2ffd37dad2c379541991c253c5b1b776
   - enabled: 1
     path: Assets/DevScenes/Tina.unity
-    guid: 00000000000000000000000000000000
+    guid: cd69f4856f774e645a0ad439dcb1e571
+  - enabled: 1
+    path: Assets/DevScenes/Help Scene.unity
+    guid: 95afa11339482a54fa3887225d5f00a7
