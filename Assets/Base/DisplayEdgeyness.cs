@@ -13,6 +13,10 @@ public class DisplayEdgeyness : MonoBehaviour {
         PlayerEdgeyness_onEdgeynessChange();
     }
 
+    void OnEnable() {
+        PlayerEdgeyness.onEdgeynessChange += PlayerEdgeyness_onEdgeynessChange;
+    }
+
     void OnDisable() {
         PlayerEdgeyness.onEdgeynessChange -= PlayerEdgeyness_onEdgeynessChange;
     }

@@ -52,7 +52,9 @@ public class PlayerPushBack : MonoBehaviour {
 
         camShake.screenShake(crashLength * (3/4f));
 
-        Vector2 direction = ((Vector2) player.transform.position - currentPosition).normalized * (pushForward ? 1 : -1);
+        Vector2 pushDirection = (((Vector2)player.transform.position - currentPosition).normalized + currentVelocity.normalized * 2).normalized;
+
+        Vector2 direction = pushDirection * (pushForward ? 1 : -1);
         
         playerRB.velocity = direction * currentVelocity.magnitude;
 
