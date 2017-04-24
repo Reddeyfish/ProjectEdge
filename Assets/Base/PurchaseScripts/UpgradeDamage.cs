@@ -18,4 +18,7 @@ public class UpgradeDamage : AbstractPurchase {
         LeechGun gun = GameObject.FindGameObjectWithTag(Tags.Player).GetComponentInChildren<LeechGun>();
         gun.changeDamageScale(damageUpgrade);
     }
+	protected override int cost() {
+		return baseCost * (int)Mathf.Pow(2, numUpgrades); //Mathf.
+	}
 }
