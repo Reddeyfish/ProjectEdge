@@ -30,6 +30,6 @@ public class UpgradeMaxHealth : AbstractPurchase {
     }
 
 	protected override int cost() {
-		return baseCost * (int)Mathf.Pow(2, numUpgrades); //Mathf.
+		return baseCost * (int)Mathf.Pow(1.65f, numUpgrades); //Mathf.
 	}
 }

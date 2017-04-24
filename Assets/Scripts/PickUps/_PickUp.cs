@@ -16,6 +16,8 @@ public class _PickUp : MonoBehaviour {
 
         SpriteRenderer spriteRend = GetComponent<SpriteRenderer>();
         spriteRend.sprite = possibleSprites[Random.Range(0, possibleSprites.Length)];
+
+        Destroy(gameObject, 120);
 	}
 	
     void OnTriggerEnter2D(Collider2D collided) {

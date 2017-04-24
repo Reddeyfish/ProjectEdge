@@ -1396,7 +1396,7 @@ MonoBehaviour:
   buttonText: {fileID: 114225841001464400}
   labelText: {fileID: 114932867301572582}
   labelFormat: Buy Shadow Edgeyness {0}
-  baseCost: 20
+  baseCost: 200
   playerPrefsKey: BuyShadow
   shadowObject: {fileID: 1307182980130980, guid: 7673b4bfddbde4c45b67fce7c177ec6f,
     type: 2}
@@ -1583,10 +1583,10 @@ MonoBehaviour:
   buttonText: {fileID: 114613496702724236}
   labelText: {fileID: 114162450228799014}
   labelFormat: Upgrade Damage {0}
-  baseCost: 1
+  baseCost: 4
   playerPrefsKey: UpgradeDamage
-  damageUpgrade: 3
-  maxDamageUpgrades: 5
+  damageUpgrade: 5
+  maxDamageUpgrades: 7
 --- !u!114 &114225841001464400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2530,9 +2530,9 @@ MonoBehaviour:
   buttonText: {fileID: 114929493286135768}
   labelText: {fileID: 114397702657444374}
   labelFormat: Restore {0} Health
-  baseCost: 8
+  baseCost: 6
   playerPrefsKey: HealthRestore
-  healthRestore: 50
+  healthRestore: 100
 --- !u!114 &114776107071191412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   buttonText: {fileID: 114156760207989266}
   labelText: {fileID: 114982667825849836}
   labelFormat: Max Health {0}
-  baseCost: 1
+  baseCost: 8
   playerPrefsKey: MaxHealth
   capacityIncrease: 50
 --- !u!114 &114809619660474206

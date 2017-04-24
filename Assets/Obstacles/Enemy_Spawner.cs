@@ -79,7 +79,10 @@ public class Enemy_Spawner : MonoBehaviour {
                 Vector3 pos = (Vector3)(Random.insideUnitCircle.normalized * Random.Range(minRadius, radius)) + player.transform.position; 
 
                 int index = Random.Range(0, enemies.Length);
-                 Instantiate(enemies[index], pos, Quaternion.identity);
+                 GameObject newEnemy = Instantiate(enemies[index], pos, Quaternion.identity);
+                Health enemyHealth = newEnemy.GetComponent<Health>();
+
+                enemyHealth.ResizeMaxHealth(enemyHealth.MaxHealth + enemyHealth.MaxHealth * (distance/400f) );
 
 
                 }
