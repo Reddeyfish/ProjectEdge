@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class DisplayEdgeyness : MonoBehaviour {
 
     [SerializeField]
-    protected Text text;
+    protected Text text;    
 
-    private void Start() {
+    private void Awake() {
         PlayerEdgeyness.onEdgeynessChange += PlayerEdgeyness_onEdgeynessChange;
         PlayerEdgeyness_onEdgeynessChange();
+    }
+
+    void OnDisable() {
+        PlayerEdgeyness.onEdgeynessChange -= PlayerEdgeyness_onEdgeynessChange;
     }
 
     private void PlayerEdgeyness_onEdgeynessChange() {
